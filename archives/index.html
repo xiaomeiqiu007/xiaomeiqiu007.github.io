@@ -408,6 +408,184 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2018/11/21/python-inject/">
+            
+                <span>python-模板注入</span>
+        </a>
+        <div class="abstract-content">
+            [前言]：最近突然有些疲惫，闲着我就去做一个小小开发，开发之后发现自己用的是jinj2。尝试一波sql注入，果然写好的框架不是这么好日的。接下来学习了下模板注入。
+[正文]：1.产生该漏洞的原因：程序猿设计问题让模板的变量可控。跟sql注入的原理差不多。程序员自己的疏忽！
+2.利用的条件：1.是利用jinja2，或者其他模板开发的。 2.模板中的部分变量，代码用户可控。
+3.常见的利用点：1.jinja2中的render_template_string，进行渲染字符串为模板的时候。示例代码如下：
+@app.errorhandler(404)
+def page_not_found(e):
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/21</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/11/14/python-flask-web-base/">
+            
+                <span>Python-flask-web基础</span>
+        </a>
+        <div class="abstract-content">
+            [Flask开发准备]：Python虚拟环境介绍与安装：因为python的版本更新的太快，flask的版本不兼容，一个虚拟环境对应一个falsk，就可以解决这个问题。
+
+安装虚拟环境：pip install virtualevn
+
+将虚拟环境安装到指定目录：virtualevn flask-evn
+
+激活flask ：进入安装的目录进入Scripts 输入active
+
+在虚拟环境中安装flask：pip install flask
+
+
+Pycharm的使用：创建一个新项目：选择刚才创建环境中的/bin/python.exe。也可以让pycharm自己创建一个flask虚拟环境
+第一个f...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/11/07/java-web/">
+            
+                <span>JAVA-WEB-开发</span>
+        </a>
+        <div class="abstract-content">
+            [前言]：最近写java作业老师要检查，那不能白白的浪费时间记录下自己开发学习过程，最后做个能看的javaweb项目。前端的就随便找个框架填上算了。
+[正文]：1.SERVERLET1.1 SERVERLET简介:
+
+Serverlet是位于Web服务器内部的，服务端的，独立于平台和协议的java应用程序，可以生成动态的web。
+Servlet是一个可信赖的程序，不受java安全性的控制，拥有和普通java应用程序一样的权限。
+Servlet是CGI Script的一种替代技术，由于Servlet在性能、可移植性、代码重用等方面比CGI具有显著的优势，因此在未来的技术发展过程中，Serv...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/07</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/11/06/网鼎杯-fakebook/">
+            
+                <span>网鼎杯第一场web_write_up</span>
+        </a>
+        <div class="abstract-content">
+            [前言]:最前看了上海的比赛自闭了，准备最近好好复现下近些天比赛的题目。首先从网鼎杯第一场开始。
+[正文]：题目：FAKEBOOK 题目文件：链接：https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q 密码：j6hh 扫一扫出来个user.php.bak（原谅我字典没扫到）还有个flag.php，然后得到user.php的代码。得到的代码如下。目前用不到接着往下做
+1234567891011121314151617181920212223242526272829303132333435363738394041class UserInfo&#123...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/06</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/09/05/序列化/">
+            
+                <span>序列化与反序列化简单-晋级</span>
+        </a>
+        <div class="abstract-content">
+            序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : serialize() 反序列化:恢复原先被序列化的变量 函数: unserialize()
+&lt;?php
+class QRQ{
+    public $data;
+    private $pass;
+    private $qrq=&quot;dasdasdas&quot;;
+    public $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);
+    public $age=array(&quot;Pet...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/05</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/08/13/little-muma/">
+            
+                <span>ISCC国赛-一句话木马分析</span>
+        </a>
+        <div class="abstract-content">
+            [前言]：北京iscc回来之后还没来得及时总结，比赛结果还是不错的国赛二等奖可以吹会了。但是更多的是收获，这次比赛发现web狗真是没法活下去了，比赛的web难的一批。除了第一个web我们做出来了，其他的我竟然都没扫描出来有高端口。。好像是6千几来着，回头复现下那个环境。第一个做出来也是千辛万苦呀，还是太菜，web狗表示打不动。应该有好多人看到一句话木马都没打动。真是这越来越难了，pwn大佬就是6上来干俩pwn虐爆全场，就在我们后面（每次好像都是），大佬在身后，萌新瑟瑟发抖。刚开始刷分的时候，基本上没几个得分的。本来想删他们的一句话木马，但是由于自己技术不熟练没种上，急于开心的刷flag没...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="php单双引号">php单双引号</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="木马">木马</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">
             
                 <span>2018西普杯铁人三项河南赛区（数据分析赛）</span>
@@ -437,25 +615,20 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/06/10/test/">
+        <a class="abstract-title" href="/2018/04/08/SQL注入-Oderby注入/">
             
-                <span>test</span>
+                <span>SQL注入-order by 注入</span>
         </a>
         <div class="abstract-content">
-            
+            ##SQL注入-ORDERBY注入
+1，后台登录代码如下：123456789101112131415161718$username = $_POST['username'];$password = $_POST['password'];if(filter($username))&#123;    //过滤括号&#125;else&#123;    $sql="SELECT * FROM admin WHERE username='".$username."'";    $result=mysql_query($sql);    @$row = mysql_fetch_array($res...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/08</span>
             </div>
             <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
             
         </div>
     </article>
@@ -588,9 +761,85 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 4
+        Total : 10
         </div>
         <!-- search  -->
         
@@ -625,12 +874,42 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">06/10</span><a class="archive-post-title" href="/2018/06/10/test/">test</a>
+            <span class="archive-post-date">11/21</span><a class="archive-post-title" href="/2018/11/21/python-inject/">python-模板注入</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href="/2018/11/14/python-flask-web-base/">Python-flask-web基础</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/07</span><a class="archive-post-title" href="/2018/11/07/java-web/">JAVA-WEB-开发</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/06</span><a class="archive-post-title" href="/2018/11/06/网鼎杯-fakebook/">网鼎杯第一场web_write_up</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/05</span><a class="archive-post-title" href="/2018/09/05/序列化/">序列化与反序列化简单-晋级</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span><a class="archive-post-title" href="/2018/08/13/little-muma/">ISCC国赛-一句话木马分析</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">06/10</span><a class="archive-post-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">2018西普杯铁人三项河南赛区（数据分析赛）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/08</span><a class="archive-post-title" href="/2018/04/08/SQL注入-Oderby注入/">SQL注入-order by 注入</a>
         </li>
     
     </ul></div>
@@ -647,6 +926,10 @@
         <span class="sidebar-tag-name" data-tags="FLASK"><span class="iconfont-archer">&#xe606;</span>FLASK</span>
     
         <span class="sidebar-tag-name" data-tags="WEB"><span class="iconfont-archer">&#xe606;</span>WEB</span>
+    
+        <span class="sidebar-tag-name" data-tags="php单双引号"><span class="iconfont-archer">&#xe606;</span>php单双引号</span>
+    
+        <span class="sidebar-tag-name" data-tags="木马"><span class="iconfont-archer">&#xe606;</span>木马</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -684,6 +967,14 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="开发"><span class="iconfont-archer">&#xe60a;</span>开发</span>
     
         <span class="sidebar-category-name" data-categories="python-flask-开发"><span class="iconfont-archer">&#xe60a;</span>python-flask-开发</span>
+    
+        <span class="sidebar-category-name" data-categories="web"><span class="iconfont-archer">&#xe60a;</span>web</span>
+    
+        <span class="sidebar-category-name" data-categories="平常的小总结"><span class="iconfont-archer">&#xe60a;</span>平常的小总结</span>
+    
+        <span class="sidebar-category-name" data-categories="write-up"><span class="iconfont-archer">&#xe60a;</span>write-up</span>
+    
+        <span class="sidebar-category-name" data-categories="write-up/开发"><span class="iconfont-archer">&#xe60a;</span>write-up/开发</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

@@ -78,6 +78,8 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -201,10 +203,8 @@
 </head>
 
     
-        <body class="home-body">
     
-    
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,34 +220,21 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            xiaomeiqiu's Studio.
-            <!-- 文章页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
-            
-                Life is fantastic
-            
-            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -359,215 +346,6 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/01/30/XXE攻击/">
-            
-                <span>XXE攻击</span>
-        </a>
-        <div class="abstract-content">
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h1><p>现在越来越多主要的web程序被发现和报告存在XXE（XML外部实体攻击）漏洞，比如说facebook，paypal等等。举个例子，我们扫一眼这些网站最近奖励的漏洞，充分证实了前面的说法。尽管XXE漏洞已经存在了很多年，但是它从来没有获得它应得的关注度。很多XML的解析器默认是含有XXE漏洞的，这意味着开发人员有责任确保这些程序不受此漏洞的影响。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="XXE">XXE</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/18/python-flaslk-web/">
-            
-                <span>Python-Flask-小项目</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言-："><a href="#前言-：" class="headerlink" title="[前言]："></a>[前言]：</h2><p>前些日子用python开发了一个简单的留言班，最后一个月学业繁忙忘了整理记录一波。今天整理温习一波，视频是参考b站上的大佬的，b站真是无所不能呀。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FLASK">FLASK</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WEB">WEB</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/21/python-inject/">
-            
-                <span>python-模板注入</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近突然有些疲惫，闲着我就去做一个小小开发，开发之后发现自己用的是jinj2。尝试一波sql注入，果然写好的框架不是这么好日的。接下来学习了下模板注入。
-[正文]：1.产生该漏洞的原因：程序猿设计问题让模板的变量可控。跟sql注入的原理差不多。程序员自己的疏忽！
-2.利用的条件：1.是利用jinja2，或者其他模板开发的。 2.模板中的部分变量，代码用户可控。
-3.常见的利用点：1.jinja2中的render_template_string，进行渲染字符串为模板的时候。示例代码如下：
-@app.errorhandler(404)
-def page_not_found(e):
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/21</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/14/python-flask-web-base/">
-            
-                <span>Python-flask-web基础</span>
-        </a>
-        <div class="abstract-content">
-            [Flask开发准备]：Python虚拟环境介绍与安装：因为python的版本更新的太快，flask的版本不兼容，一个虚拟环境对应一个falsk，就可以解决这个问题。
-
-安装虚拟环境：pip install virtualevn
-
-将虚拟环境安装到指定目录：virtualevn flask-evn
-
-激活flask ：进入安装的目录进入Scripts 输入active
-
-在虚拟环境中安装flask：pip install flask
-
-
-Pycharm的使用：创建一个新项目：选择刚才创建环境中的/bin/python.exe。也可以让pycharm自己创建一个flask虚拟环境
-第一个f...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/07/java-web/">
-            
-                <span>JAVA-WEB-开发</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近写java作业老师要检查，那不能白白的浪费时间记录下自己开发学习过程，最后做个能看的javaweb项目。前端的就随便找个框架填上算了。
-[正文]：1.SERVERLET1.1 SERVERLET简介:
-
-Serverlet是位于Web服务器内部的，服务端的，独立于平台和协议的java应用程序，可以生成动态的web。
-Servlet是一个可信赖的程序，不受java安全性的控制，拥有和普通java应用程序一样的权限。
-Servlet是CGI Script的一种替代技术，由于Servlet在性能、可移植性、代码重用等方面比CGI具有显著的优势，因此在未来的技术发展过程中，Serv...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/06/网鼎杯-fakebook/">
-            
-                <span>网鼎杯第一场web_write_up</span>
-        </a>
-        <div class="abstract-content">
-            [前言]:最前看了上海的比赛自闭了，准备最近好好复现下近些天比赛的题目。首先从网鼎杯第一场开始。
-[正文]：题目：FAKEBOOK 题目文件：链接：https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q 密码：j6hh 扫一扫出来个user.php.bak（原谅我字典没扫到）还有个flag.php，然后得到user.php的代码。得到的代码如下。目前用不到接着往下做
-1234567891011121314151617181920212223242526272829303132333435363738394041class UserInfo&#123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/09/05/序列化/">
-            
-                <span>序列化与反序列化简单-晋级</span>
-        </a>
-        <div class="abstract-content">
-            序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : serialize() 反序列化:恢复原先被序列化的变量 函数: unserialize()
-&lt;?php
-class QRQ{
-    public $data;
-    private $pass;
-    private $qrq=&quot;dasdasdas&quot;;
-    public $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);
-    public $age=array(&quot;Pet...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href="/2018/08/13/little-muma/">
             
                 <span>ISCC国赛-一句话木马分析</span>
@@ -593,153 +371,10 @@ class QRQ{
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">
-            
-                <span>2018西普杯铁人三项河南赛区（数据分析赛）</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/04/08/SQL注入-Oderby注入/">
-            
-                <span>SQL注入-order by 注入</span>
-        </a>
-        <div class="abstract-content">
-            ##SQL注入-ORDERBY注入
-1，后台登录代码如下：123456789101112131415161718$username = $_POST['username'];$password = $_POST['password'];if(filter($username))&#123;    //过滤括号&#125;else&#123;    $sql="SELECT * FROM admin WHERE username='".$username."'";    $result=mysql_query($sql);    @$row = mysql_fetch_array($res...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/08</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="https://raw.githubusercontent.com/xiaomeiqiu007/warm-photos/master/timg.jpg">
-    <div class="profile-name">xiaomeiqiu</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:1870977163@qq.com" class="iconfont-archer email" title="email"></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/xiaomeiqiu007" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="//www.lybsec.top" target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="//www.77sec.cn" target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">

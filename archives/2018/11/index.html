@@ -78,6 +78,8 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -201,10 +203,8 @@
 </head>
 
     
-        <body class="home-body">
     
-    
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -220,34 +220,21 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            xiaomeiqiu's Studio.
-            <!-- 文章页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
-            
-                Life is fantastic
-            
-            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -352,68 +339,6 @@ height:50vh;
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
             <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/30/XXE攻击/">
-            
-                <span>XXE攻击</span>
-        </a>
-        <div class="abstract-content">
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h1><p>现在越来越多主要的web程序被发现和报告存在XXE（XML外部实体攻击）漏洞，比如说facebook，paypal等等。举个例子，我们扫一眼这些网站最近奖励的漏洞，充分证实了前面的说法。尽管XXE漏洞已经存在了很多年，但是它从来没有获得它应得的关注度。很多XML的解析器默认是含有XXE漏洞的，这意味着开发人员有责任确保这些程序不受此漏洞的影响。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="XXE">XXE</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/18/python-flaslk-web/">
-            
-                <span>Python-Flask-小项目</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言-："><a href="#前言-：" class="headerlink" title="[前言]："></a>[前言]：</h2><p>前些日子用python开发了一个简单的留言班，最后一个月学业繁忙忘了整理记录一波。今天整理温习一波，视频是参考b站上的大佬的，b站真是无所不能呀。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FLASK">FLASK</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WEB">WEB</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     
     
@@ -532,214 +457,10 @@ Servlet是CGI Script的一种替代技术，由于Servlet在性能、可移植�
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/09/05/序列化/">
-            
-                <span>序列化与反序列化简单-晋级</span>
-        </a>
-        <div class="abstract-content">
-            序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : serialize() 反序列化:恢复原先被序列化的变量 函数: unserialize()
-&lt;?php
-class QRQ{
-    public $data;
-    private $pass;
-    private $qrq=&quot;dasdasdas&quot;;
-    public $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);
-    public $age=array(&quot;Pet...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/08/13/little-muma/">
-            
-                <span>ISCC国赛-一句话木马分析</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：北京iscc回来之后还没来得及时总结，比赛结果还是不错的国赛二等奖可以吹会了。但是更多的是收获，这次比赛发现web狗真是没法活下去了，比赛的web难的一批。除了第一个web我们做出来了，其他的我竟然都没扫描出来有高端口。。好像是6千几来着，回头复现下那个环境。第一个做出来也是千辛万苦呀，还是太菜，web狗表示打不动。应该有好多人看到一句话木马都没打动。真是这越来越难了，pwn大佬就是6上来干俩pwn虐爆全场，就在我们后面（每次好像都是），大佬在身后，萌新瑟瑟发抖。刚开始刷分的时候，基本上没几个得分的。本来想删他们的一句话木马，但是由于自己技术不熟练没种上，急于开心的刷flag没...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="php单双引号">php单双引号</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="木马">木马</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">
-            
-                <span>2018西普杯铁人三项河南赛区（数据分析赛）</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/04/08/SQL注入-Oderby注入/">
-            
-                <span>SQL注入-order by 注入</span>
-        </a>
-        <div class="abstract-content">
-            ##SQL注入-ORDERBY注入
-1，后台登录代码如下：123456789101112131415161718$username = $_POST['username'];$password = $_POST['password'];if(filter($username))&#123;    //过滤括号&#125;else&#123;    $sql="SELECT * FROM admin WHERE username='".$username."'";    $result=mysql_query($sql);    @$row = mysql_fetch_array($res...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/08</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="https://raw.githubusercontent.com/xiaomeiqiu007/warm-photos/master/timg.jpg">
-    <div class="profile-name">xiaomeiqiu</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:1870977163@qq.com" class="iconfont-archer email" title="email"></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/xiaomeiqiu007" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="//www.lybsec.top" target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="//www.77sec.cn" target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">

